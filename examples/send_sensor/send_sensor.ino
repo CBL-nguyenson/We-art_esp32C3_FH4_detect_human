@@ -3,9 +3,6 @@
 #include "SEAN_DEV_Sensor.h"
 // https://github.com/HomeSpan/HomeSpan/blob/master/docs/ServiceList.md#motionsensor-85
 
-
-
-
 void setup()
 {
   Serial.begin(115200);

@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
-#define RX_PIN 3 // Chọn số chân GPIO cho UART RX
-#define TX_PIN 1 // Chọn số chân GPIO cho UART TX
+#define RX_PIN 8 // Chọn số chân GPIO cho UART RX
+#define TX_PIN 9 // Chọn số chân GPIO cho UART TX
 #define BAUD_RATE 115200 // Tốc độ baud của UART
 
 void setup() {
