@@ -40,6 +40,7 @@
 // off.
 
 #include "HomeSpan.h" 
+#include "extras/PwmPin.h"                          // library of various PWM functions
 
 ////////////////////////////////////
 

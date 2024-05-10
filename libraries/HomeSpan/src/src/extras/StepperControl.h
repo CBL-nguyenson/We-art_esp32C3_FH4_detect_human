@@ -1,7 +1,7 @@
 /*********************************************************************************
  *  MIT License
  *  
- *  Copyright (c) 2023-2024 Gregg E. Berman
+ *  Copyright (c) 2023 Gregg E. Berman
  *  
  *  https://github.com/HomeSpan/HomeSpan
  *  
@@ -28,7 +28,6 @@
 #pragma once
 
 #include <Arduino.h>
-#include "PwmPin.h"
 
 [[maybe_unused]] static const char* STEPPER_TAG = "StepperControl";
 
@@ -104,12 +103,3 @@ class StepperControl {
 };
 
 //////////////////////////
-
-#include "Stepper_UNIPOLAR.h"
-#include "Stepper_TB6612.h"     // https://www.adafruit.com/product/2448
-#include "Stepper_A3967.h"      // https://www.sparkfun.com/products/12779
-
-
-struct Stepper_ULN2003A : Stepper_UNIPOLAR {
-  Stepper_ULN2003A(int IN1, int IN2, int IN3, int IN4, std::pair<uint32_t, uint32_t> taskParams = {1,0}) : Stepper_UNIPOLAR(IN1,IN3,IN2,IN4,taskParams){}
-};

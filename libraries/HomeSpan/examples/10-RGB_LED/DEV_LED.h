@@ -3,6 +3,10 @@
 //   DEVICE-SPECIFIC LED SERVICES //
 ////////////////////////////////////
 
+#include "extras/PwmPin.h"                          // library of various PWM functions
+
+////////////////////////////////////
+
 struct DEV_LED : Service::LightBulb {               // ON/OFF LED
 
   int ledPin;                                       // pin number defined for this LED

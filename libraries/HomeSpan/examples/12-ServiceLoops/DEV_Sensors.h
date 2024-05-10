@@ -59,7 +59,7 @@ struct DEV_TempSensor : Service::TemperatureSensor {     // A standalone Tempera
 struct DEV_AirQualitySensor : Service::AirQualitySensor {     // A standalone Air Quality sensor
 
   // An Air Quality Sensor is similar to a Temperature Sensor except that it supports a wide variety of measurements.
-  // We will use three of them.  The first is required, the second two are optional.
+  // We will use three of them.  The first is required, he second two are optional.
 
   SpanCharacteristic *airQuality;                 // reference to the Air Quality Characteristic, which is an integer from 0 to 5
   SpanCharacteristic *o3Density;                  // reference to the Ozone Density Characteristic, which is a float from 0 to 1000

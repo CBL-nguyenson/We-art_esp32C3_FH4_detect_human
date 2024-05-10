@@ -26,6 +26,7 @@
  ********************************************************************************/
 
 #include "HomeSpan.h"             // include the HomeSpan library
+#include "extras/RFControl.h"     // include RF Control Library
 
 void setup() {     
  

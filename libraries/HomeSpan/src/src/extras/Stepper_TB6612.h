@@ -1,7 +1,7 @@
 /*********************************************************************************
  *  MIT License
  *  
- *  Copyright (c) 2023-2024 Gregg E. Berman
+ *  Copyright (c) 2023 Gregg E. Berman
  *  
  *  https://github.com/HomeSpan/HomeSpan
  *  
@@ -25,8 +25,6 @@
  *  
  ********************************************************************************/
 
-#pragma once
-
 // Implementation of StepperControl for an Adafruit TB6612 1.2A DC/Stepper Motor Driver
 // Breakout Board (https://www.adafruit.com/product/2448)
 
@@ -45,6 +43,11 @@
 
 // In either configuration the motor outputs can be enabled (current running through the coils)
 // disabled (no current / high impedence) or set to a short brake.
+
+#pragma once
+
+#include "StepperControl.h"
+#include "PwmPin.h"
 
 //////////////////////////
 

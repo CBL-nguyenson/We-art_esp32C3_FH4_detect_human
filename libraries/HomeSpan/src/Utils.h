@@ -1,7 +1,7 @@
 /*********************************************************************************
  *  MIT License
  *  
- *  Copyright (c) 2020-2024 Gregg E. Berman
+ *  Copyright (c) 2020-2023 Gregg E. Berman
  *  
  *  https://github.com/HomeSpan/HomeSpan
  *  
@@ -28,8 +28,7 @@
 #pragma once
 
 #include <Arduino.h>
-
-#include "PSRAM.h"
+#include <driver/timer.h>
 
 namespace Utils {
 
@@ -43,58 +42,27 @@ String mask(char *c, int n);          // simply utility that creates a String fr
 // going out of scope
 
 template <class bufType>
-class TempBuffer {
-
-  private:
+struct TempBuffer {
+  bufType *buf;
+  int nBytes;
   
-  bufType *buf=NULL;
-  size_t nElements;
-
-  public:
-  
-  TempBuffer(size_t _nElements=1) : nElements(_nElements) {
-    buf=(bufType *)HS_MALLOC(nElements*sizeof(bufType));
+  TempBuffer(size_t len){
+    nBytes=len*sizeof(bufType);
+    buf=(bufType *)heap_caps_malloc(nBytes,MALLOC_CAP_8BIT);
     if(buf==NULL){
-      Serial.printf("\n\n*** FATAL ERROR: Requested allocation of %d bytes failed.  Program Halting.\n\n",nElements*sizeof(bufType));
+      Serial.print("\n\n*** FATAL ERROR: Requested allocation of ");
+      Serial.print(nBytes);
+      Serial.print(" bytes failed.  Program Halting.\n\n");
       while(1);
     }
    }
 
-  TempBuffer(bufType *addBuf...) : nElements(0) {
-    va_list args;
-    va_start(args,addBuf);
-    while(addBuf!=NULL){
-      size_t addElements=va_arg(args,size_t);    
-      buf=(bufType *)HS_REALLOC(buf,(nElements+addElements)*sizeof(bufType));
-      if(buf==NULL){
-        Serial.printf("\n\n*** FATAL ERROR: Requested allocation of %d bytes failed.  Program Halting.\n\n",nElements*sizeof(bufType));
-        while(1);
-      }
-      memcpy(buf+nElements,addBuf,addElements*sizeof(bufType));
-      nElements+=addElements;
-      addBuf=va_arg(args,bufType *);
-    }
-    va_end(args);   
-   }
-   
   ~TempBuffer(){
-    free(buf);
+    heap_caps_free(buf);
   }
 
   int len(){
-    return(nElements*sizeof(bufType));
-  }
-
-  int size(){
-    return(nElements);
-  }
-
-  bufType *get(){
-    return(buf);
-  }
-
-  operator bufType*() const{
-    return(buf);
+    return(nBytes);
   }
   
 };
@@ -102,6 +70,12 @@ class TempBuffer {
 ////////////////////////////////
 //         PushButton         //
 ////////////////////////////////
+
+#if SOC_TOUCH_VERSION_2
+typedef uint32_t touch_value_t;
+#else
+typedef uint16_t touch_value_t;
+#endif
 
 class PushButton{
   
@@ -111,23 +85,15 @@ class PushButton{
   uint32_t singleAlarm;
   uint32_t doubleAlarm;
   uint32_t longAlarm;
-
-#if SOC_TOUCH_VERSION_2
-  typedef uint32_t touch_value_t;
-#else
-  typedef uint16_t touch_value_t;
-#endif  
   
   static touch_value_t threshold;
   static const int calibCount=20;
-
-  public:
-
-  typedef boolean (*triggerType_t)(int pin);
   
   protected:
 
   int pressType;
+  typedef boolean (*triggerType_t)(int pin);
+
   int pin;
   triggerType_t triggerType;
 

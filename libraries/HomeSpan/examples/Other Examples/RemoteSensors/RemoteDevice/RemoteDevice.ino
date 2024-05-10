@@ -57,8 +57,7 @@ void setup() {
   Serial.begin(115200);
   delay(1000);
 
-  Serial.printf("\n\nThis is a REMOTE Device with MAC Address = %s\n",WiFi.macAddress().c_str());
-  Serial.printf("NOTE: This MAC Address must be entered into the corresponding SpanPoint() call of the MAIN Device.\n\n");
+  Serial.printf("Starting\n\n");
 
   // In the line below, replace the MAC Address with that of your MAIN HOMESPAN DEVICE
 
