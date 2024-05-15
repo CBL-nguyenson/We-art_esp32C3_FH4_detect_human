@@ -1,6 +1,6 @@
 # SpanPoint: Point-to-Point Communication between ESP32 Devices
 
-SpanPoint is HomeSpan's easy-to-use implementation of the Espressif ESP-NOW protocol.  SpanPoint provides bi-directional, point-to-point communication of small, fixed-size messages directly between ESP32 devices based on their MAC Addresses without the need for a central WiFi network.
+SpanPoint is HomeSpan's easy-to-use implementation of the Espressif ESP-NOW protocol.  SpanPoint provides bi-directional, point-to-point communication of small, fixed-size messages directly between ESP32 devices based on their MAC Addresses without the need for a central WiFi network.  SpanPoint can also be used on an ESP-8266 when configured as a remote device.
 
 To establish connectivity between any two devices simply instantiate a SpanPoint object on each device that references the MAC Address of the other device, as well as specifies the (potentially different) sizes of the messages that each device is expected to send to, and receive from, the other.
 
@@ -60,6 +60,16 @@ Also note that regardless of whether or not the queue if full, if the size of a 
   * this *optional* **class-level** method changes the default passphrase used to generate ESP-NOW encryption keys for all SpanPoint objects from the default passphrase ("HomeSpan") to *pwd*, which can be a character string of any length
   * if used, this method must be called *before* the instantiation of any SpanPoint objects.  Example: `SpanPoint::setPassword("MyPassword");`
   * the same passphrase must be used among all devices that are communicating via SpanPoint, else the receiving device will not be able to decrypt messages it receives
+
+* `static void setEncryption(boolean encrypt)`
+
+  * this *optional* **class-level** method provides the ability to enable or disable encryption according to whether *encrypt* is set to *true* or *false*
+  * by default, encryption is normally enabled (using the password above)
+  * if used, this method must be called *before* the instantiation of any SpanPoint objects.  Example: `SpanPoint::setEncryption(false);` disables encryption for all SpanPoint connections
+  * note that this is a global setting - if SpanPoint encryption is disabled on the main device, it must also be disabled on every remote device, else communication between devices will fail
+  * enabling/disabling encryption impacts that total number of SpanPoint connections that can be supported by the ESP32's ESP-NOW functionality:
+    * with encryption enabled, the ESP32 can support a maximum of 7 ESP-NOW links (i.e. 7 instances of SpanPoint)
+    * with encryption disabled, the ESP32 can support a maximum of 20 ESP-NOW links (i.e. 20 instances of SpanPoint)
 
 * `static void setChannelMask(uint16_t mask)`
 
