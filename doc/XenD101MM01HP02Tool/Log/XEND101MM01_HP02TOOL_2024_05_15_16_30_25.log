@@ -1,0 +1,211 @@
+2024/05/15 16:30:39.324 => CloseSerial: mSerialFile=0xffffffff
+2024/05/15 16:30:39.324 => Prepare Open Serial: Com=\\.\COM12 BaudRate=115200
+2024/05/15 16:30:39.324 => Open \\.\COM12 failed:5
+2024/05/15 16:30:39.324 => OpenSerial: Com=\\.\COM12 BaudRate=115200, Success=0, mSerialFile=0xffffffff
+2024/05/15 16:30:39.324 => CloseSerial: mSerialFile=0xffffffff
+2024/05/15 16:33:09.639 => CloseSerial: mSerialFile=0xffffffff
+2024/05/15 16:33:09.639 => Prepare Open Serial: Com=\\.\COM12 BaudRate=115200
+2024/05/15 16:33:09.683 => OpenSerial: Com=\\.\COM12 BaudRate=115200, Success=1, mSerialFile=0x000009d4
+2024/05/15 16:33:09.690 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:33:09.858 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:33:09.865 => GetVersion Return: v1.5.4_0.0
+2024/05/15 16:33:09.950 => ReadSetting_RadarOperatorConfig, result: Success
+2024/05/15 16:33:10.932 => CRadarProtocolDevice::OpenCmdMode: CMDID(0x00FF) failed with:A002
+2024/05/15 16:33:11.091 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:33:11.198 => WriteSetting_RadarOperatorConfig, result: Success
+2024/05/15 16:33:20.608 => CRadarProtocolDevice::OpenCmdMode: CMDID(0x00FF) failed with:A002
+2024/05/15 16:33:20.777 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:33:20.888 => WriteSetting_RadarOperatorConfig, result: Success
+2024/05/15 16:33:24.365 => CRadarProtocolDevice::OpenCmdMode: CMDID(0x00FF) failed with:A002
+2024/05/15 16:33:24.528 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:33:24.604 => ReadSetting_RadarOperatorConfig, result: Success
+2024/05/15 16:33:26.655 => Start Realtime data show.
+2024/05/15 16:33:26.655 => thread create success, thread handle=0x00000d6c, id=10748, name=ReadData
+2024/05/15 16:33:26.655 => thread information, name=ReadData, tid=10748(0x000029fc)
+2024/05/15 16:33:26.655 => CRadarProtocolDevice::OpenCmdMode: CMDID(0x00FF) failed with:A002
+2024/05/15 16:33:26.822 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:35:52.320 => prepare exit thread..., name=ReadData, tid=10748(0x000029fc)
+2024/05/15 16:35:52.384 => CRadarProtocolDevice::OpenCmdMode: CMDID(0x00FF) failed with:A002
+2024/05/15 16:35:52.542 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:35:52.557 => thread exit, name=ReadData, tid=10748(0x000029fc)
+2024/05/15 16:35:52.558 => thread exit over, name=ReadData, tid=10748(0x000029fc)
+2024/05/15 16:35:52.568 => Stop Realtime data show.
+2024/05/15 16:35:52.576 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:35:52.744 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:35:52.850 => WriteSetting_RadarOperatorConfig, result: Success
+2024/05/15 16:35:52.850 => Start Realtime data show.
+2024/05/15 16:35:52.853 => thread create success, thread handle=0x00000d48, id=12828, name=ReadData
+2024/05/15 16:35:52.853 => thread information, name=ReadData, tid=12828(0x0000321c)
+2024/05/15 16:35:52.861 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:35:53.023 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:36:05.498 => prepare exit thread..., name=ReadData, tid=12828(0x0000321c)
+2024/05/15 16:36:05.586 => CRadarProtocolDevice::OpenCmdMode: CMDID(0x00FF) failed with:A002
+2024/05/15 16:36:05.744 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:36:05.760 => thread exit, name=ReadData, tid=12828(0x0000321c)
+2024/05/15 16:36:05.761 => thread exit over, name=ReadData, tid=12828(0x0000321c)
+2024/05/15 16:36:05.763 => Stop Realtime data show.
+2024/05/15 16:36:11.030 => CRadarProtocolDevice::OpenCmdMode: CMDID(0x00FF) failed with:A002
+2024/05/15 16:36:11.197 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:36:11.273 => ReadSetting_RadarOperatorConfig, result: Success
+2024/05/15 16:36:16.758 => Stop Noise scan.
+2024/05/15 16:36:16.760 => Start Realtime data show.
+2024/05/15 16:36:16.760 => thread create success, thread handle=0x00000d40, id=15636, name=ReadData
+2024/05/15 16:36:16.760 => thread information, name=ReadData, tid=15636(0x00003d14)
+2024/05/15 16:36:16.760 => CRadarProtocolDevice::OpenCmdMode: CMDID(0x00FF) failed with:A002
+2024/05/15 16:36:16.933 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:36:43.296 => prepare exit thread..., name=ReadData, tid=15636(0x00003d14)
+2024/05/15 16:36:43.398 => CRadarProtocolDevice::OpenCmdMode: CMDID(0x00FF) failed with:A002
+2024/05/15 16:36:43.571 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:36:43.586 => thread exit, name=ReadData, tid=15636(0x00003d14)
+2024/05/15 16:36:43.587 => thread exit over, name=ReadData, tid=15636(0x00003d14)
+2024/05/15 16:36:43.591 => Stop Realtime data show.
+2024/05/15 16:36:44.680 => CRadarProtocolDevice::OpenCmdMode: CMDID(0x00FF) failed with:A002
+2024/05/15 16:36:44.849 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:36:44.956 => WriteSetting_RadarOperatorConfig, result: Success
+2024/05/15 16:36:47.368 => CRadarProtocolDevice::OpenCmdMode: CMDID(0x00FF) failed with:A002
+2024/05/15 16:36:47.539 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:36:47.610 => ReadSetting_RadarOperatorConfig, result: Success
+2024/05/15 16:36:51.544 => Stop Realtime data show.
+2024/05/15 16:36:51.544 => Stop Noise scan.
+2024/05/15 16:36:51.544 => CRadarProtocolDevice::OpenCmdMode: CMDID(0x00FF) failed with:A002
+2024/05/15 16:36:51.713 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:36:51.729 => Cancel Read Data
+2024/05/15 16:36:51.729 => CloseSerial: mSerialFile=0x000009d4
+2024/05/15 16:37:06.247 => CloseSerial: mSerialFile=0xffffffff
+2024/05/15 16:37:06.247 => Prepare Open Serial: Com=\\.\COM12 BaudRate=115200
+2024/05/15 16:37:06.250 => OpenSerial: Com=\\.\COM12 BaudRate=115200, Success=1, mSerialFile=0x00000c94
+2024/05/15 16:37:06.258 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:37:06.427 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:37:06.434 => GetVersion Return: v1.5.4_0.0
+2024/05/15 16:37:06.513 => ReadSetting_RadarOperatorConfig, result: Success
+2024/05/15 16:37:07.814 => Start Realtime data show.
+2024/05/15 16:37:07.814 => thread create success, thread handle=0x00000cbc, id=7372, name=ReadData
+2024/05/15 16:37:07.814 => thread information, name=ReadData, tid=7372(0x00001ccc)
+2024/05/15 16:37:07.814 => CRadarProtocolDevice::OpenCmdMode: CMDID(0x00FF) failed with:A002
+2024/05/15 16:37:07.984 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:37:17.981 => prepare exit thread..., name=ReadData, tid=7372(0x00001ccc)
+2024/05/15 16:37:18.042 => CRadarProtocolDevice::OpenCmdMode: CMDID(0x00FF) failed with:A002
+2024/05/15 16:37:18.200 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:37:18.215 => thread exit, name=ReadData, tid=7372(0x00001ccc)
+2024/05/15 16:37:18.216 => thread exit over, name=ReadData, tid=7372(0x00001ccc)
+2024/05/15 16:37:18.221 => Stop Realtime data show.
+2024/05/15 16:37:26.377 => Start Realtime data show.
+2024/05/15 16:37:26.377 => thread create success, thread handle=0x00000ee8, id=17716, name=ReadData
+2024/05/15 16:37:26.377 => thread information, name=ReadData, tid=17716(0x00004534)
+2024/05/15 16:37:26.377 => CRadarProtocolDevice::OpenCmdMode: CMDID(0x00FF) failed with:A002
+2024/05/15 16:37:26.546 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:37:28.623 => prepare exit thread..., name=ReadData, tid=17716(0x00004534)
+2024/05/15 16:37:28.709 => CRadarProtocolDevice::OpenCmdMode: CMDID(0x00FF) failed with:A002
+2024/05/15 16:37:28.881 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:37:28.896 => thread exit, name=ReadData, tid=17716(0x00004534)
+2024/05/15 16:37:28.897 => thread exit over, name=ReadData, tid=17716(0x00004534)
+2024/05/15 16:37:28.900 => Stop Realtime data show.
+2024/05/15 16:37:29.649 => Start Realtime data show.
+2024/05/15 16:37:29.649 => thread create success, thread handle=0x000009d4, id=11320, name=ReadData
+2024/05/15 16:37:29.649 => thread information, name=ReadData, tid=11320(0x00002c38)
+2024/05/15 16:37:29.650 => CRadarProtocolDevice::OpenCmdMode: CMDID(0x00FF) failed with:A002
+2024/05/15 16:37:29.813 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:37:30.410 => prepare exit thread..., name=ReadData, tid=11320(0x00002c38)
+2024/05/15 16:37:30.503 => CRadarProtocolDevice::OpenCmdMode: CMDID(0x00FF) failed with:A002
+2024/05/15 16:37:30.667 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:37:30.682 => thread exit, name=ReadData, tid=11320(0x00002c38)
+2024/05/15 16:37:30.683 => thread exit over, name=ReadData, tid=11320(0x00002c38)
+2024/05/15 16:37:30.687 => Stop Realtime data show.
+2024/05/15 16:37:32.379 => Start Realtime data show.
+2024/05/15 16:37:32.382 => thread create success, thread handle=0x00000d58, id=18624, name=ReadData
+2024/05/15 16:37:32.382 => thread information, name=ReadData, tid=18624(0x000048c0)
+2024/05/15 16:37:32.382 => CRadarProtocolDevice::OpenCmdMode: CMDID(0x00FF) failed with:A002
+2024/05/15 16:37:32.545 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:37:33.675 => prepare exit thread..., name=ReadData, tid=18624(0x000048c0)
+2024/05/15 16:37:33.779 => CRadarProtocolDevice::OpenCmdMode: CMDID(0x00FF) failed with:A002
+2024/05/15 16:37:33.948 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:37:33.963 => thread exit, name=ReadData, tid=18624(0x000048c0)
+2024/05/15 16:37:33.964 => thread exit over, name=ReadData, tid=18624(0x000048c0)
+2024/05/15 16:37:33.968 => Stop Realtime data show.
+2024/05/15 16:37:36.294 => Start Realtime data show.
+2024/05/15 16:37:36.297 => thread create success, thread handle=0x00000d94, id=5244, name=ReadData
+2024/05/15 16:37:36.297 => thread information, name=ReadData, tid=5244(0x0000147c)
+2024/05/15 16:37:36.297 => CRadarProtocolDevice::OpenCmdMode: CMDID(0x00FF) failed with:A002
+2024/05/15 16:37:36.466 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:38:03.273 => prepare exit thread..., name=ReadData, tid=5244(0x0000147c)
+2024/05/15 16:38:03.352 => CRadarProtocolDevice::OpenCmdMode: CMDID(0x00FF) failed with:A002
+2024/05/15 16:38:03.521 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:38:03.536 => thread exit, name=ReadData, tid=5244(0x0000147c)
+2024/05/15 16:38:03.537 => thread exit over, name=ReadData, tid=5244(0x0000147c)
+2024/05/15 16:38:03.547 => Stop Realtime data show.
+2024/05/15 16:38:03.554 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:38:03.724 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:38:03.833 => WriteSetting_RadarOperatorConfig, result: Success
+2024/05/15 16:38:03.833 => Start Realtime data show.
+2024/05/15 16:38:03.839 => thread create success, thread handle=0x00000acc, id=3720, name=ReadData
+2024/05/15 16:38:03.839 => thread information, name=ReadData, tid=3720(0x00000e88)
+2024/05/15 16:38:03.846 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:38:04.003 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:38:06.322 => prepare exit thread..., name=ReadData, tid=3720(0x00000e88)
+2024/05/15 16:38:06.416 => CRadarProtocolDevice::OpenCmdMode: CMDID(0x00FF) failed with:A002
+2024/05/15 16:38:06.573 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:38:06.588 => thread exit, name=ReadData, tid=3720(0x00000e88)
+2024/05/15 16:38:06.589 => thread exit over, name=ReadData, tid=3720(0x00000e88)
+2024/05/15 16:38:06.591 => Stop Realtime data show.
+2024/05/15 16:38:07.627 => CRadarProtocolDevice::OpenCmdMode: CMDID(0x00FF) failed with:A002
+2024/05/15 16:38:07.799 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:38:07.909 => WriteSetting_RadarOperatorConfig, result: Success
+2024/05/15 16:38:11.553 => CRadarProtocolDevice::OpenCmdMode: CMDID(0x00FF) failed with:A002
+2024/05/15 16:38:11.723 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:38:11.833 => WriteSetting_RadarOperatorConfig, result: Success
+2024/05/15 16:38:15.741 => Stop Noise scan.
+2024/05/15 16:38:15.744 => CRadarProtocolDevice::OpenCmdMode: CMDID(0x00FF) failed with:A002
+2024/05/15 16:38:15.906 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:38:15.922 => Cancel Read Data
+2024/05/15 16:38:15.922 => CloseSerial: mSerialFile=0x00000c94
+2024/05/15 16:38:17.889 => Stop Noise scan.
+2024/05/15 16:38:17.891 => Stop Realtime data show.
+2024/05/15 16:38:19.281 => CloseSerial: mSerialFile=0xffffffff
+2024/05/15 16:38:19.281 => Prepare Open Serial: Com=\\.\COM12 BaudRate=115200
+2024/05/15 16:38:19.287 => OpenSerial: Com=\\.\COM12 BaudRate=115200, Success=1, mSerialFile=0x00000e48
+2024/05/15 16:38:19.294 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:38:19.462 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:38:19.470 => GetVersion Return: v1.5.4_0.0
+2024/05/15 16:38:19.548 => ReadSetting_RadarOperatorConfig, result: Success
+2024/05/15 16:38:20.455 => Stop Realtime data show.
+2024/05/15 16:38:20.458 => CRadarProtocolDevice::OpenCmdMode: CMDID(0x00FF) failed with:A002
+2024/05/15 16:38:20.625 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:38:20.640 => Cancel Read Data
+2024/05/15 16:38:20.640 => CloseSerial: mSerialFile=0x00000e48
+2024/05/15 16:38:22.116 => CloseSerial: mSerialFile=0xffffffff
+2024/05/15 16:38:22.116 => Prepare Open Serial: Com=\\.\COM12 BaudRate=115200
+2024/05/15 16:38:22.122 => OpenSerial: Com=\\.\COM12 BaudRate=115200, Success=1, mSerialFile=0x00000d38
+2024/05/15 16:38:22.129 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:38:22.295 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:38:22.302 => GetVersion Return: v1.5.4_0.0
+2024/05/15 16:38:22.381 => ReadSetting_RadarOperatorConfig, result: Success
+2024/05/15 16:38:41.760 => Stop Noise scan.
+2024/05/15 16:38:41.760 => Start Noise scan.
+2024/05/15 16:38:41.761 => thread create success, thread handle=0x00000c4c, id=12608, name=ReadData
+2024/05/15 16:38:41.761 => thread information, name=ReadData, tid=12608(0x00003140)
+2024/05/15 16:38:41.761 => thread exit, name=ReadData, tid=12608(0x00003140)
+2024/05/15 16:38:47.431 => prepare exit thread..., name=ReadData, tid=12608(0x00003140)
+2024/05/15 16:38:47.431 => thread exit over, name=ReadData, tid=12608(0x00003140)
+2024/05/15 16:38:47.436 => Stop Noise scan.
+2024/05/15 16:38:47.437 => Start Realtime data show.
+2024/05/15 16:38:47.437 => thread create success, thread handle=0x00000fe4, id=10684, name=ReadData
+2024/05/15 16:38:47.437 => thread information, name=ReadData, tid=10684(0x000029bc)
+2024/05/15 16:38:47.437 => CRadarProtocolDevice::OpenCmdMode: CMDID(0x00FF) failed with:A002
+2024/05/15 16:38:47.600 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:38:59.231 => prepare exit thread..., name=ReadData, tid=10684(0x000029bc)
+2024/05/15 16:38:59.331 => CRadarProtocolDevice::OpenCmdMode: CMDID(0x00FF) failed with:A002
+2024/05/15 16:38:59.492 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:38:59.508 => thread exit, name=ReadData, tid=10684(0x000029bc)
+2024/05/15 16:38:59.509 => thread exit over, name=ReadData, tid=10684(0x000029bc)
+2024/05/15 16:38:59.510 => Stop Realtime data show.
+2024/05/15 16:38:59.510 => Stop Realtime data show.
+2024/05/15 16:38:59.516 => Stop Noise scan.
+2024/05/15 16:38:59.528 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:38:59.695 => protocol version = 2, send_recv buffer size = 32
+2024/05/15 16:38:59.710 => Cancel Read Data
+2024/05/15 16:38:59.710 => CloseSerial: mSerialFile=0x00000d38
+2024/05/15 16:38:59.712 => Cancel Read Data
+2024/05/15 16:38:59.712 => CloseSerial: mSerialFile=0xffffffff
+2024/05/15 16:38:59.712 => Cancel Read Data
+2024/05/15 16:38:59.712 => CloseSerial: mSerialFile=0xffffffff
+2024/05/15 16:38:59.712 => CloseSerial: mSerialFile=0xffffffff

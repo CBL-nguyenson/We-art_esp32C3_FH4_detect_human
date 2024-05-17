@@ -16,6 +16,7 @@ void setup()
 
   homeSpan.setLogLevel(1);
   
+  homeSpan.enableAutoStartAP();
   homeSpan.setApSSID("MakerLab_homekit");
   homeSpan.setApPassword("27272727");
 

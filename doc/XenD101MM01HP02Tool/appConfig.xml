@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<AppConfig
+	BaudRate="115200"
+	LANGUAGE="CHS"
+	RadarConfigFile="MM01-E.xml">
+	<ParamSetting
+		GateMax="2"
+		ObjectDisappearDelayTime="1"
+		TriggerGate0Threshold="48.16"
+		HoldGate0Threshold="48.16"
+		TriggerGate1Threshold="48.16"
+		HoldGate1Threshold="48.16"
+		TriggerGate2Threshold="48.00"
+		HoldGate2Threshold="45.37"
+		TriggerGate3Threshold="47.97"
+		HoldGate3Threshold="44.96"
+		TriggerGate4Threshold="46.17"
+		HoldGate4Threshold="47.28"
+		TriggerGate5Threshold="45.00"
+		HoldGate5Threshold="45.16"
+		TriggerGate6Threshold="45.45"
+		HoldGate6Threshold="42.44"
+		TriggerGate7Threshold="45.11"
+		HoldGate7Threshold="42.10"
+		TriggerGate8Threshold="43.23"
+		HoldGate8Threshold="40.22"
+		TriggerGate9Threshold="42.35"
+		HoldGate9Threshold="39.34"
+		TriggerGate10Threshold="41.99"
+		HoldGate10Threshold="38.98"
+		TriggerGate11Threshold="39.19"
+		HoldGate11Threshold="36.18"
+		TriggerGate12Threshold="40.06"
+		HoldGate12Threshold="37.05"
+		TriggerGate13Threshold="38.39"
+		HoldGate13Threshold="35.38"
+		TriggerGate14Threshold="37.32"
+		HoldGate14Threshold="34.31"
+		TriggerGate15Threshold="37.43"
+		HoldGate15Threshold="34.42" />
+	<ObjectInfo
+		TriggerSensingScale="8.000000"
+		HoldSensingScale="4.000000" />
+	<DataProcess
+		ScanTime="10"
+		SaveFilePath="D:\" />
+	<Download
+		DownloadFilePath="E:\project\series_project\svn_MMS01\XenD101MMS01\TRUNK\Project\XenD101_MMS01\Objects\XenD101_MMS01.bin" />
+</AppConfig>
