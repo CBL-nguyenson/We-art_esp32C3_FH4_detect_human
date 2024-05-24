@@ -14,7 +14,7 @@ void setup()
   // setCpuFrequencyMhz(80);
 
 
-  homeSpan.begin(Category::Bridges, "HomeSpan Sensor detect");
+  homeSpan.begin(Category::Bridges, "HomeSpan MakerLab");
 
   homeSpan.setLogLevel(1);
   
@@ -23,7 +23,7 @@ void setup()
 
   homeSpan.setControlPin(9);// nút điều khiển 
   homeSpan.setStatusPin(8);// led trạng thái
-  homeSpan.setPairingCode("27272727");
+  // homeSpan.setPairingCode("27272727");
 
   new SpanAccessory();
     new Service::AccessoryInformation();
@@ -43,11 +43,11 @@ void setup()
     new Service::AccessoryInformation();
       new Characteristic::Identify(); 
       new Characteristic::Name("Fan supper cool");
+      new SEAN_DEV_FAN(10,7,6,0);
     // Fan_Button_1           pin: 10
     // Fan_Button_2           pin: 7
     // Fan_Button_3           pin: 6
     // Fan_Button_Start_Stop  pin: 0
-      new SEAN_DEV_FAN(10,7,6,0);
       
 
 //--------------------------------
