@@ -4,23 +4,39 @@
 
 struct SEAN_DEV_FAN : Service ::Fan
 {
-    uint8_t PinDetect;
-    uint8_t Fan_Button_Start_Stop;
-    uint8_t Fan_Button_1;
-    uint8_t Fan_Button_2;
-    uint8_t Fan_Button_3;
+    int Value_Speed_fan = 0;
+
+    int PinDetect;
+    int Fan_Button_Start_Stop;
+    int Fan_Button_1;
+    int Fan_Button_2;
+    int Fan_Button_3;
+
+    int Fan_State_1;
+    int Fan_State_2;
+    int Fan_State_3;
 
     SpanCharacteristic *Active_Fan;
     SpanCharacteristic *Speed_fan;
     // SpanCharacteristic *Current_Fan_State;
 
-    SEAN_DEV_FAN(uint8_t Fan_Button_1, uint8_t Fan_Button_2, uint8_t Fan_Button_3, uint8_t Fan_Button_Start_Stop) : Service ::Fan()
+
+    SEAN_DEV_FAN(
+        int Fan_Button_1,
+        int Fan_Button_2,
+        int Fan_Button_3,
+        int Fan_Button_Start_Stop,
+        int Fan_State_1,
+        int Fan_State_2,
+        int Fan_State_3)
+        : Service ::Fan()
     {
 
         Active_Fan = new Characteristic::Active();
         Speed_fan = new Characteristic::RotationSpeed(0);
         Speed_fan->setRange(0, 100, 5);
 
+        //------------------------------------------------
         new SpanButton(Fan_Button_1);
         new SpanButton(Fan_Button_2);
         new SpanButton(Fan_Button_3);
@@ -30,6 +46,16 @@ struct SEAN_DEV_FAN : Service ::Fan
         this->Fan_Button_2 = Fan_Button_2;
         this->Fan_Button_3 = Fan_Button_3;
         this->Fan_Button_Start_Stop = Fan_Button_Start_Stop;
+        //------------------------------------------------
+        this->Fan_State_1 = Fan_State_1;
+        pinMode(Fan_State_1, OUTPUT);
+
+        this->Fan_State_3 = Fan_State_3;
+        pinMode(Fan_State_2, OUTPUT);
+
+        this->Fan_State_3 = Fan_State_3;
+        pinMode(Fan_State_3, OUTPUT);
+
     }
 
     void button(int pin, int pressType) override
@@ -48,6 +74,7 @@ struct SEAN_DEV_FAN : Service ::Fan
             { // if a SINGLE press of the button...
                 Active_Fan->setVal(1);
                 Speed_fan->setVal(33);
+                Value_Speed_fan = 33;
             }
             else if (pressType == SpanButton::DOUBLE)
             { // if a DOUBLE press of the button...
@@ -62,7 +89,8 @@ struct SEAN_DEV_FAN : Service ::Fan
             if (pressType == SpanButton::SINGLE)
             { // if a SINGLE press of the button...
                 Active_Fan->setVal(1);
-                Speed_fan->setVal(66);
+                Speed_fan->setVal(50);
+                Value_Speed_fan = 50;
             }
         }
 
@@ -72,6 +100,7 @@ struct SEAN_DEV_FAN : Service ::Fan
             { // if a SINGLE press of the button...
                 Active_Fan->setVal(1);
                 Speed_fan->setVal(100);
+                Value_Speed_fan = 100;
             }
         }
 
@@ -92,14 +121,36 @@ struct SEAN_DEV_FAN : Service ::Fan
     //--------------------------Update-----------------------
     boolean update()
     {
+        Value_Speed_fan = Speed_fan->getNewVal();
 
-        // digitalWrite(ledPin,power->getNewVal());
         return (true);
     }
     //--------------------------LOOP-----------------------
     void loop()
     {
 
+        // Serial.println(Value_Speed_fan);
+        if (Speed_fan->timeVal() > 500)
+        {
+            if (Value_Speed_fan <= 34)
+            {
+                digitalWrite(Fan_State_1, HIGH);
+                digitalWrite(Fan_State_2, LOW);
+                digitalWrite(Fan_State_3, LOW);
+            }
+             if ((Value_Speed_fan > 35) && (Value_Speed_fan < 66))
+            {
+                digitalWrite(Fan_State_1, LOW);
+                digitalWrite(Fan_State_2, HIGH);
+                digitalWrite(Fan_State_3, LOW);
+            }
+            if (Value_Speed_fan >= 66)
+            {
+                digitalWrite(Fan_State_1, LOW);
+                digitalWrite(Fan_State_2, LOW);
+                digitalWrite(Fan_State_3, HIGH);
+            }
+        }
     } // loop
 };
 
