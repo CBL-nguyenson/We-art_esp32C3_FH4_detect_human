@@ -20,7 +20,6 @@ struct SEAN_DEV_FAN : Service ::Fan
     SpanCharacteristic *Speed_fan;
     // SpanCharacteristic *Current_Fan_State;
 
-
     SEAN_DEV_FAN(
         int Fan_Button_1,
         int Fan_Button_2,
@@ -32,9 +31,6 @@ struct SEAN_DEV_FAN : Service ::Fan
         : Service ::Fan()
     {
 
-        Active_Fan = new Characteristic::Active();
-        Speed_fan = new Characteristic::RotationSpeed(0);
-        Speed_fan->setRange(0, 100, 5);
 
         //------------------------------------------------
         new SpanButton(Fan_Button_1);
@@ -50,12 +46,15 @@ struct SEAN_DEV_FAN : Service ::Fan
         this->Fan_State_1 = Fan_State_1;
         pinMode(Fan_State_1, OUTPUT);
 
-        this->Fan_State_3 = Fan_State_3;
+        this->Fan_State_2 = Fan_State_2;
         pinMode(Fan_State_2, OUTPUT);
 
         this->Fan_State_3 = Fan_State_3;
         pinMode(Fan_State_3, OUTPUT);
 
+        Active_Fan = new Characteristic::Active();
+        Speed_fan = new Characteristic::RotationSpeed(0);
+        Speed_fan->setRange(0, 100, 5);
     }
 
     void button(int pin, int pressType) override
@@ -110,11 +109,13 @@ struct SEAN_DEV_FAN : Service ::Fan
             {
                 Active_Fan->setVal(0);
                 Speed_fan->setVal(0);
+                Value_Speed_fan = 0;
             }
             else if (Active_Fan->getNewVal() == false)
             {
                 Active_Fan->setVal(1);
                 Speed_fan->setVal(50);
+                Value_Speed_fan = 50;
             }
         }
     }
@@ -130,25 +131,31 @@ struct SEAN_DEV_FAN : Service ::Fan
     {
 
         // Serial.println(Value_Speed_fan);
-        if (Speed_fan->timeVal() > 500)
+        if (Speed_fan->timeVal() > 100)
         {
-            if (Value_Speed_fan <= 34)
+            if ((Value_Speed_fan > 5) && (Value_Speed_fan <= 43))
             {
                 digitalWrite(Fan_State_1, HIGH);
                 digitalWrite(Fan_State_2, LOW);
                 digitalWrite(Fan_State_3, LOW);
             }
-             if ((Value_Speed_fan > 35) && (Value_Speed_fan < 66))
+            else if ((Value_Speed_fan > 35) && (Value_Speed_fan < 66))
             {
                 digitalWrite(Fan_State_1, LOW);
                 digitalWrite(Fan_State_2, HIGH);
                 digitalWrite(Fan_State_3, LOW);
             }
-            if (Value_Speed_fan >= 66)
+            else if (Value_Speed_fan >= 66)
             {
                 digitalWrite(Fan_State_1, LOW);
                 digitalWrite(Fan_State_2, LOW);
                 digitalWrite(Fan_State_3, HIGH);
+            }
+            else if (Value_Speed_fan <= 5)
+            {
+                digitalWrite(Fan_State_1, LOW);
+                digitalWrite(Fan_State_2, LOW);
+                digitalWrite(Fan_State_3, LOW);
             }
         }
     } // loop
