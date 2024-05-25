@@ -13,23 +13,23 @@ void setup() {
   // setCpuFrequencyMhz(80);
 
 
-  homeSpan.begin(Category::Bridges, "HomeSpan MakerLab");
+  homeSpan.begin(Category::Bridges, "HomeSpan MakerLab_V2");
 
-  homeSpan.setLogLevel(0);
+  homeSpan.setLogLevel(1);
 
   // homeSpan.setApSSID("MakerLab_homekit");
   // homeSpan.setApPassword("27272727");
 
   homeSpan.setControlPin(9);  // nút điều khiển
   homeSpan.setStatusPin(8);   // led trạng thái
-  // homeSpan.setPairingCode("27272727");
+  homeSpan.setPairingCode("27042005");
 
   new SpanAccessory();
   new Service::AccessoryInformation();
   new Characteristic::Identify();
   new Characteristic::Name("Ramdom_value_test");
   new Characteristic::Model("MakerLab_test_device");
-  new Characteristic::SerialNumber("MKE_IOT_1.1.0");
+  new Characteristic::SerialNumber("MKE_IOT_1.2.0");
 
 
   new SpanAccessory();
