@@ -7,7 +7,6 @@
 // https://github.com/HomeSpan/HomeSpan/blob/master/docs/ServiceList.md#motionsensor-85
 
 void setup() {
-  // delay(100);
   Serial.begin(115200);
   // Serial1.begin(115200, SERIAL_8N1, 20 , 21);
 
@@ -18,8 +17,8 @@ void setup() {
 
   homeSpan.setLogLevel(1);
 
-  // homeSpan.setApSSID("MakerLab_homekit");
-  // homeSpan.setApPassword("27272727");
+  homeSpan.setApSSID("MakerLab_homekit");
+  homeSpan.setApPassword("27272727");
 
   homeSpan.setControlPin(9);  // nút điều khiển
   homeSpan.setStatusPin(8);   // led trạng thái
@@ -49,11 +48,11 @@ void setup() {
   // Fan_Button_3           pin: 6
   // Fan_Button_Start_Stop  pin: 0
 
-  new SpanAccessory();
-  new Service::AccessoryInformation();
-  new Characteristic::Identify();
-  new Characteristic::Name("Pixel led");
-  new NeoPixel_RGB(2,8); 
+  // new SpanAccessory();
+  // new Service::AccessoryInformation();
+  // new Characteristic::Identify();
+  // new Characteristic::Name("Pixel led");
+  // new NeoPixel_RGB(2,8); 
   //--------------------------------
   // homeSpan.autoPoll();
 }
