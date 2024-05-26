@@ -239,11 +239,11 @@ void Network::processRequest(char *body, char *formData){
   
   String responseBody="<html><meta charset=\"utf-8\"><head><style>"
                         "p{font-size:300%; margin:1em}"
-                        "label{font-size:300%; margin:1em; color: white;}"
-                        "input{font-size:250%; margin:1em; color: white;}"
-                        "button{font-size:250%; margin:1em; color: white;}"
+                        "label{font-size:300%; margin:1em; color: black;}"
+                        "input{font-size:250%; margin:1em; color: black;}"
+                        "button{font-size:250%; margin:1em; color: black;}"
                       "</style></head>"
-                      "<body style=\"background-color: black;\">"
+                      "<body style=\"background-color: white;\">"
                       "<center><p><b>HomeSpan Setup</b></p></center>";
 
   if(!strncmp(body,"POST /configure ",16) &&                              // POST CONFIGURE

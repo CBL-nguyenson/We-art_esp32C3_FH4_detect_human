@@ -2,7 +2,7 @@
 #include "HomeSpan.h"
 #include "SEAN_DEV_Sensor.h"
 #include "SEAN_DEV_FAN.h"
-#include "SEAN_DEV_Pixel.h"
+// #include "SEAN_DEV_Pixel.h"
 
 // https://github.com/HomeSpan/HomeSpan/blob/master/docs/ServiceList.md#motionsensor-85
 
@@ -17,12 +17,6 @@ void setup() {
 
   homeSpan.setLogLevel(1);
 
-  homeSpan.setApSSID("MakerLab_homekit");
-  homeSpan.setApPassword("27272727");
-
-  homeSpan.setControlPin(9);  // nút điều khiển
-  homeSpan.setStatusPin(8);   // led trạng thái
-  homeSpan.setPairingCode("27041601");
 
   new SpanAccessory();
   new Service::AccessoryInformation();
@@ -53,8 +47,16 @@ void setup() {
   // new Characteristic::Identify();
   // new Characteristic::Name("Pixel led");
   // new NeoPixel_RGB(2,8); 
-  //--------------------------------
+
+
+  // ------------------------------------------------------
   // homeSpan.autoPoll();
+  homeSpan.setApSSID("MakerLab_homekit");
+  homeSpan.setApPassword("27272727");
+
+  homeSpan.setControlPin(9);  // nút điều khiển
+  homeSpan.setStatusPin(8);   // led trạng thái
+  homeSpan.setPairingCode("27041601");
 }
 
 void loop() {

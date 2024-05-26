@@ -75,7 +75,7 @@
 #define     DEFAULT_AP_PASSWORD       "homespan"          // change with homeSpan.setApPassword(pwd)
 #define     DEFAULT_OTA_PASSWORD      "homespan-ota"      // change with 'O' command
 
-#define     DEFAULT_AP_TIMEOUT        300                 // change with homeSpan.setApTimeout(nSeconds)
+#define     DEFAULT_AP_TIMEOUT        600                 // change with homeSpan.setApTimeout(nSeconds)
 #define     DEFAULT_COMMAND_TIMEOUT   120                 // change with homeSpan.setCommandTimeout(nSeconds)
 
 #define     DEFAULT_LOG_LEVEL         0                   // change with homeSpan.setLogLevel(level)
@@ -91,7 +91,7 @@
 /////////////////////////////////////////////////////
 //              OTA PARTITION INFO                 //
 
-#define     HOMESPAN_MAGIC_COOKIE     "HomeSpanMagicCookie##2022"
+#define     HOMESPAN_MAGIC_COOKIE     "MakerLab_VN##2024"
 
 /////////////////////////////////////////////////////
 //              STATUS LED SETTINGS                //
