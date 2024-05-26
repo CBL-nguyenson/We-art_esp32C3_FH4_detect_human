@@ -67,7 +67,7 @@
 #define     DEFAULT_HOST_NAME         "HomeSpan"          // change with optional third argument in homeSpan.begin()
 #define     DEFAULT_MODEL_NAME        "HomeSpan-ESP32"    // change with optional fourth argument in homeSpan.begin()
 
-#define     DEFAULT_SETUP_CODE        "46637726"          // changed during network setup or with 'S' command
+#define     DEFAULT_SETUP_CODE        "16092005"          // changed during network setup or with 'S' command
 
 #define     DEFAULT_QR_ID             "HSPN"              // change with homeSpan.setQRID(qrID);
 

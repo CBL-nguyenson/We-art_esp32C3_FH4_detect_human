@@ -5,7 +5,7 @@
 struct SEAN_DEV_FAN : Service ::Fan
 {
     uint8_t Value_Speed_fan = 0;
-    bool State_Active_Fan = false;
+    bool State_Active_Fan = true;
 
     uint8_t PinDetect;
     uint8_t Fan_Button_Start_Stop;
@@ -54,7 +54,7 @@ struct SEAN_DEV_FAN : Service ::Fan
 
         Active_Fan = new Characteristic::Active();
         Speed_fan = new Characteristic::RotationSpeed(0);
-        Speed_fan->setRange(0, 100, 5);
+        Speed_fan->setRange(0, 100, uint8_t((100 / 3) + 0.7));
     }
 
     void button(int pin, int pressType) override
@@ -72,6 +72,7 @@ struct SEAN_DEV_FAN : Service ::Fan
             if (pressType == SpanButton::SINGLE)
             { // if a SINGLE press of the button...
                 Active_Fan->setVal(true);
+                State_Active_Fan = true;
                 Speed_fan->setVal(33);
                 Value_Speed_fan = 33;
             }
@@ -88,6 +89,7 @@ struct SEAN_DEV_FAN : Service ::Fan
             if (pressType == SpanButton::SINGLE)
             { // if a SINGLE press of the button...
                 Active_Fan->setVal(true);
+                State_Active_Fan = true;
                 Speed_fan->setVal(50);
                 Value_Speed_fan = 50;
             }
@@ -98,6 +100,7 @@ struct SEAN_DEV_FAN : Service ::Fan
             if (pressType == SpanButton::SINGLE)
             { // if a SINGLE press of the button...
                 Active_Fan->setVal(true);
+                State_Active_Fan = true;
                 Speed_fan->setVal(100);
                 Value_Speed_fan = 100;
             }
@@ -108,12 +111,14 @@ struct SEAN_DEV_FAN : Service ::Fan
             if (Active_Fan->getNewVal() == true)
             {
                 Active_Fan->setVal(false);
+                State_Active_Fan = false;
                 Speed_fan->setVal(0);
                 Value_Speed_fan = 0;
             }
             else if (Active_Fan->getNewVal() == false)
             {
                 Active_Fan->setVal(true);
+                State_Active_Fan = true;
                 Speed_fan->setVal(50);
                 Value_Speed_fan = 50;
             }
@@ -124,57 +129,18 @@ struct SEAN_DEV_FAN : Service ::Fan
     {
         Value_Speed_fan = Speed_fan->getNewVal();
         State_Active_Fan = Active_Fan->getNewVal();
-
         return (true);
     }
     //--------------------------LOOP-----------------------
     void loop()
     {
-        // Serial.print(Value_Speed_fan);
-        // Serial.print("||");
-        // Serial.println(State_Active_Fan);
-
-        // if (Speed_fan->timeVal() > 100)
-        // {
-        //     if ((Value_Speed_fan > 5) && (Value_Speed_fan <= 43))
-        //     {
-        //         digitalWrite(Fan_State_1, HIGH);
-        //         digitalWrite(Fan_State_2, LOW);
-        //         digitalWrite(Fan_State_3, LOW);
-        //     }
-        //     else if ((Value_Speed_fan > 35) && (Value_Speed_fan < 66))
-        //     {
-        //         digitalWrite(Fan_State_1, LOW);
-        //         digitalWrite(Fan_State_2, HIGH);
-        //         digitalWrite(Fan_State_3, LOW);
-        //     }
-        //     else if (Value_Speed_fan >= 66)
-        //     {
-        //         digitalWrite(Fan_State_1, LOW);
-        //         digitalWrite(Fan_State_2, LOW);
-        //         digitalWrite(Fan_State_3, HIGH);
-        //     }
-        //     else if (Value_Speed_fan <= 5)
-        //     {
-        //         digitalWrite(Fan_State_1, LOW);
-        //         digitalWrite(Fan_State_2, LOW);
-        //         digitalWrite(Fan_State_3, LOW);
-        //     }
-        // }
-        // if (Active_Fan->timeVal() > 100)
-        // {
-        //     if (!State_Active_Fan)
-        //     {
-        //         digitalWrite(Fan_State_1, LOW);
-        //         digitalWrite(Fan_State_2, LOW);
-        //         digitalWrite(Fan_State_3, LOW);
-        //         // Speed_fan->setVal(0);
-        //         // Value_Speed_fan = 0;
-        //     }
-        // }
-
         if (Active_Fan->timeVal() > 100)
         {
+            if (Speed_fan->getVal() == 99)
+            {
+                Speed_fan->setVal(100);
+                State_Active_Fan = 100;
+            }
             if (!State_Active_Fan)
             {
                 digitalWrite(Fan_State_1, LOW);
@@ -212,29 +178,4 @@ struct SEAN_DEV_FAN : Service ::Fan
             }
         }
     }
-} // loop
-
-;
-
-// void click_Bt_1(){
-//     Active_Fan -> setVal(1);
-//     Speed_fan -> setVal(33);
-// }
-// void click_Bt_2(){
-//     Active_Fan -> setVal(1);
-//     Speed_fan -> setVal(66);
-// }
-// void click_Bt_3(){
-//     Active_Fan -> setVal(1);
-//     Speed_fan -> setVal(100);
-// }
-// void click_Bt_Start_Stop(){
-//     if (Active_Fan->getNewVal() == 1){
-//         Active_Fan -> setVal(0);
-//         Speed_fan -> setVal(0);
-//     }
-//     else if (Active_Fan->getNewVal() == 0){
-//         Active_Fan -> setVal(1);
-//         Speed_fan -> setVal(50);
-//     }
-// }
+};

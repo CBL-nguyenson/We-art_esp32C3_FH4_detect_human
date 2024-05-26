@@ -2,6 +2,7 @@
 #include "HomeSpan.h"
 #include "SEAN_DEV_Sensor.h"
 #include "SEAN_DEV_FAN.h"
+#include "SEAN_DEV_Pixel.h"
 
 // https://github.com/HomeSpan/HomeSpan/blob/master/docs/ServiceList.md#motionsensor-85
 
@@ -13,7 +14,7 @@ void setup() {
   // setCpuFrequencyMhz(80);
 
 
-  homeSpan.begin(Category::Bridges, "HomeSpan MakerLab_V2");
+  homeSpan.begin(Category::Bridges, "TEST_HomeSpan MakerLab_V2");
 
   homeSpan.setLogLevel(1);
 
@@ -22,7 +23,7 @@ void setup() {
 
   homeSpan.setControlPin(9);  // nút điều khiển
   homeSpan.setStatusPin(8);   // led trạng thái
-  homeSpan.setPairingCode("27042005");
+  homeSpan.setPairingCode("27041601");
 
   new SpanAccessory();
   new Service::AccessoryInformation();
@@ -48,7 +49,11 @@ void setup() {
   // Fan_Button_3           pin: 6
   // Fan_Button_Start_Stop  pin: 0
 
-
+  new SpanAccessory();
+  new Service::AccessoryInformation();
+  new Characteristic::Identify();
+  new Characteristic::Name("Pixel led");
+  new NeoPixel_RGB(2,8); 
   //--------------------------------
   // homeSpan.autoPoll();
 }
