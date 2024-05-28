@@ -30,6 +30,7 @@
 #include <WiFi.h>
 // #include "WiFiConfig.h"
 #include "Settings.h"
+#include <WebServer.h>
 
 const int MAX_SSID=32;                              // max number of characters in WiFi SSID
 const int MAX_PWD=64;                               // max number of characters in WiFi Password

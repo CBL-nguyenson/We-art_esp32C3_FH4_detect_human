@@ -112,12 +112,12 @@ boolean Network::allowedCode(char *s)
 // WiFiConfig(DEFAULT_AP_SSID, DEFAULT_AP_PASSWORD)
 //     : apSSID(apSSID), apPassword(apPassword), server(80) {}
 
-void begin_AP()
+void Network::begin_AP()
 {
   // Serial.begin(115200);
 
   // Khởi động WiFi ở chế độ AP
-  WiFi.softAP(*apSSID, *apPassword);
+  WiFi.softAP(apSSID, apPassword);
 
   IPAddress IP = WiFi.softAPIP();
   Serial.print("AP IP address: ");
@@ -138,17 +138,17 @@ void begin_AP()
   Serial.println("Connect to AP 'ESP32_Config' and navigate to http://192.168.4.1");
 }
 
-void handleClient()
+void Network::handleClient()
 {
   server.handleClient();
 }
 
-void handleRoot()
+void Network::handleRoot()
 {
   server.send(200, "text/html", generateHTML());
 }
 
-void handleConfigure()
+void Network::handleConfigure()
 {
   user_ssid = server.arg("ssid");
   String ssid_manual = server.arg("ssid_manual");
@@ -164,7 +164,7 @@ void handleConfigure()
   Serial.println("SSID and Password stored. Please restart to connect.");
 }
 
-bool is_config()
+bool Network::is_config()
 {
   if (config_WF == true)
   {
@@ -176,16 +176,16 @@ bool is_config()
   }
 }
 
-String SSID_S()
+String Network::SSID_S()
 {
   return user_ssid;
 }
 
-String PASS_S()
+String Network::PASS_S()
 {
   return user_password;
 }
-void connectToWiFi()
+void Network::connectToWiFi()
 {
   if (user_ssid.length() == 0)
   {
@@ -201,7 +201,7 @@ void connectToWiFi()
   else
   {
     // Kết nối WiFi có mật khẩu
-    WiFi.begin(user_ssid.c_str(), user_password.c_str());
+     WiFi.begin(wifiData.ssid, wifiData.pwd);
   }
 
   Serial.print("Connecting to ");
@@ -228,12 +228,12 @@ void connectToWiFi()
   }
 }
 
-void handleRefresh()
+void Network::handleRefresh()
 {
   handleRoot();
 }
 
-String generateHTML()
+String Network::generateHTML()
 {
   String htmlPageStart = R"rawliteral(
 <!DOCTYPE html>
@@ -352,9 +352,10 @@ String generateHTML()
 //////////////////////////////
 void Network::apConfigure()
 {
-
+  wifiData.ssid[0] = '\0';
+  wifiData.pwd[0] = '\0';
   LOG0("*** Starting Access Point: %s / %s\n", apSSID, apPassword);
-  WiFiConfig wifiConfig(apSSID, apPassword);
+  // WiFiConfig wifiConfig(apSSID, apPassword);
 
   STATUS_UPDATE(start(LED_AP_STARTED), HS_AP_STARTED)
 
@@ -398,14 +399,20 @@ void Network::apConfigure()
         homeSpan.reboot();
       }
     }
-    wifiConfig.handleClient();
-    if (is_config == true)
+    // wifiConfig.handleClient();
+    if (is_config() == true)
     {
       while (true)
       {
         if (WiFi.status() != WL_CONNECTED)
         {
-
+  // WiFi.begin(wifiData.ssid, wifiData.pwd);
+          char Sean_ssid[MAX_SSID+1];
+          char Sean_pass[MAX_SSID+1];
+          strcpy(wifiData.ssid, SSID_S().toCharArray(Sean_ssid, MAX_SSID+1));
+          // wifiData.ssid   = str.toCharArray(SSID_S(), MAX_SSID+1);
+          strcpy(wifiData.pwd, PASS_S().toCharArray(Sean_pass, MAX_PWD+1));
+          // wifiData.pwd   = str.toCharArray(PASS_S(), MAX_PWD+1);
           connectToWiFi();
         }
         else
