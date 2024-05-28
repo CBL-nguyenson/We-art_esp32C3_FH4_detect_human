@@ -201,7 +201,7 @@ void Network::connectToWiFi()
   else
   {
     // Kết nối WiFi có mật khẩu
-     WiFi.begin(wifiData.ssid, wifiData.pwd);
+    WiFi.begin(wifiData.ssid, wifiData.pwd);
   }
 
   Serial.print("Connecting to ");
@@ -361,7 +361,7 @@ void Network::apConfigure()
 
   LOG0("\nScanning for Networks...\n\n");
   //////////////////////////////////// SEANSEAN
-  begin_AP();                         
+  begin_AP();
   //////////////////////////////////
   alarmTimeOut = millis() + lifetime; // Access Point will shut down when alarmTimeOut is reached
   apStatus = 0;                       // status will be "timed out" unless changed
@@ -399,19 +399,23 @@ void Network::apConfigure()
         homeSpan.reboot();
       }
     }
-    // wifiConfig.handleClient();
+    handleClient();
     if (is_config() == true)
     {
       while (true)
       {
         if (WiFi.status() != WL_CONNECTED)
         {
-  // WiFi.begin(wifiData.ssid, wifiData.pwd);
-          char Sean_ssid[MAX_SSID+1];
-          char Sean_pass[MAX_SSID+1];
-          strcpy(wifiData.ssid, SSID_S().toCharArray(Sean_ssid, MAX_SSID+1));
+          // WiFi.begin(wifiData.ssid, wifiData.pwd);
+
+          char Sean_ssid[MAX_SSID + 1];
+          char Sean_pass[MAX_PWD + 1];
+          SSID_S().toCharArray(Sean_ssid, MAX_SSID + 1);
+          PASS_S().toCharArray(Sean_pass, MAX_PWD + 1);
+
+          strcpy(wifiData.ssid, Sean_ssid);
           // wifiData.ssid   = str.toCharArray(SSID_S(), MAX_SSID+1);
-          strcpy(wifiData.pwd, PASS_S().toCharArray(Sean_pass, MAX_PWD+1));
+          strcpy(wifiData.pwd, Sean_pass);
           // wifiData.pwd   = str.toCharArray(PASS_S(), MAX_PWD+1);
           connectToWiFi();
         }
