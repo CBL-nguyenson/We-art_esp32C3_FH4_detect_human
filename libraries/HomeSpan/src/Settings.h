@@ -67,7 +67,7 @@
 #define     DEFAULT_HOST_NAME         "HomeSpan"          // change with optional third argument in homeSpan.begin()
 #define     DEFAULT_MODEL_NAME        "HomeSpan-ESP32"    // change with optional fourth argument in homeSpan.begin()
 
-#define     DEFAULT_SETUP_CODE        "16092005"          // changed during network setup or with 'S' command
+#define     DEFAULT_SETUP_CODE        "46637726"          // changed during network setup or with 'S' command
 
 #define     DEFAULT_QR_ID             "HSPN"              // change with homeSpan.setQRID(qrID);
 
@@ -75,7 +75,7 @@
 #define     DEFAULT_AP_PASSWORD       "homespan"          // change with homeSpan.setApPassword(pwd)
 #define     DEFAULT_OTA_PASSWORD      "homespan-ota"      // change with 'O' command
 
-#define     DEFAULT_AP_TIMEOUT        600                 // change with homeSpan.setApTimeout(nSeconds)
+#define     DEFAULT_AP_TIMEOUT        300                 // change with homeSpan.setApTimeout(nSeconds)
 #define     DEFAULT_COMMAND_TIMEOUT   120                 // change with homeSpan.setCommandTimeout(nSeconds)
 
 #define     DEFAULT_LOG_LEVEL         0                   // change with homeSpan.setLogLevel(level)
@@ -91,7 +91,7 @@
 /////////////////////////////////////////////////////
 //              OTA PARTITION INFO                 //
 
-#define     HOMESPAN_MAGIC_COOKIE     "MakerLab_VN##2024"
+#define     HOMESPAN_MAGIC_COOKIE     "HomeSpanMagicCookie##2022"
 
 /////////////////////////////////////////////////////
 //              STATUS LED SETTINGS                //

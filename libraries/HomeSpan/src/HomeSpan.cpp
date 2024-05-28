@@ -101,7 +101,8 @@ void Span::begin(Category catID, const char *displayName, const char *hostNameBa
   delay(2000);
 
   LOG0("\n************************************************************\n"
-                 "Welcome to MakerLab-AppleHome-kit || HomeSpan Lisense!\n"
+                 "Welcome to HomeSpan!\n"
+                 "Apple HomeKit for the Espressif ESP-32 WROOM and Arduino IDE\n"
                  "************************************************************\n\n"
                  "** Please ensure serial monitor is set to transmit <newlines>\n\n");
 

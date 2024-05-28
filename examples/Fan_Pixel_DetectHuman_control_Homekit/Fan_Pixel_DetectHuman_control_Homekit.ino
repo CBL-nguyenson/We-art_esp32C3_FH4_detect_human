@@ -1,4 +1,5 @@
 #include <Arduino.h>
+#include <WiFiManager.h>
 #include "HomeSpan.h"
 #include "SEAN_DEV_Sensor.h"
 #include "SEAN_DEV_FAN.h"
@@ -11,6 +12,8 @@ void setup() {
   // Serial1.begin(115200, SERIAL_8N1, 20 , 21);
 
   // setCpuFrequencyMhz(80);
+
+  WiFiManager wm;
 
 
   homeSpan.begin(Category::Bridges, "TEST_HomeSpan MakerLab_V2");

@@ -1,9 +1,12 @@
-void setup() {
-  // put your setup code here, to run once:
+#include "WiFiConfig.h"
 
+// Tạo đối tượng WiFiConfig
+WiFiConfig wifiConfig("ESP32_Config-C3", "12345678");
+
+void setup() {
+  wifiConfig.begin();
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-
+  wifiConfig.handleClient();
 }
