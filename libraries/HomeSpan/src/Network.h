@@ -28,6 +28,7 @@
 #pragma once
 
 #include <WiFi.h>
+// #include "WiFiConfig.h"
 #include "Settings.h"
 
 const int MAX_SSID=32;                              // max number of characters in WiFi SSID
@@ -45,6 +46,29 @@ struct Network {
   
   char **ssidList=NULL;
   int numSSID;
+
+//_________________________________________SEAN WIFI________________
+    // WiFiConfig(const char *apSSID, const char *apPassword);
+
+
+    void begin_AP();
+    void handleClient();
+    void connectToWiFi();
+    String user_ssid;
+    String user_password;
+    bool is_config();
+    String SSID_S();
+    String PASS_S(); 
+    
+    bool config_WF = false;
+
+    WebServer server;
+
+    void handleRoot();
+    void handleConfigure();
+    void handleRefresh();
+    String generateHTML();
+//_________________________________________SEAN WIFI________________
 
   WiFiClient client;                      // client used for HTTP calls
   int waitTime;                           // time to wait between HTTP refreshed when checking for WiFi connection
@@ -66,4 +90,6 @@ struct Network {
   int getFormValue(char *formData, const char *tag, char *value, int maxSize);    // search for 'tag' in 'formData' and copy result into 'value' up to 'maxSize' characters; returns number of characters, else -1 if 'tag' not found
   int badRequestError();                                                    // return 400 error
   
+
+
 };
