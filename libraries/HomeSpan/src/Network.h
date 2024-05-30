@@ -58,8 +58,7 @@ struct Network {
     String user_ssid;
     String user_password;
     bool is_config();
-    String SSID_S();
-    String PASS_S(); 
+
     
     bool config_WF = false;
 

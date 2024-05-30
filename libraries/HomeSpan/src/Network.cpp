@@ -117,6 +117,9 @@ void Network::begin_AP()
   // Serial.begin(115200);
 
   // Khởi động WiFi ở chế độ AP
+  wifiData.ssid[0] = '\0';
+  wifiData.pwd[0] = '\0';
+
   WiFi.softAP(apSSID, apPassword);
 
   IPAddress IP = WiFi.softAPIP();
@@ -150,6 +153,10 @@ void Network::handleRoot()
 
 void Network::handleConfigure()
 {
+
+  wifiData.ssid[0] = '\0';
+  wifiData.pwd[0] = '\0';
+
   user_ssid = server.arg("ssid");
   String ssid_manual = server.arg("ssid_manual");
   user_password = server.arg("password");
@@ -158,10 +165,15 @@ void Network::handleConfigure()
   {
     user_ssid = ssid_manual;
   }
+  // ______________________________SEAN_________________________
+  user_ssid.toCharArray(wifiData.ssid, MAX_SSID + 1);
+  user_password.toCharArray(wifiData.pwd, MAX_PWD + 1);
+  Serial.println(wifiData.ssid);
+  Serial.println(wifiData.pwd);
+  config_WF = true;
+  server.send(200, "text/html", "Configuration Saved.");
 
-  server.send(200, "text/html", "Configuration Saved. Please restart the device to connect to WiFi.");
-
-  Serial.println("SSID and Password stored. Please restart to connect.");
+  // Serial.println("SSID and Password stored. Please restart to connect.");
 }
 
 bool Network::is_config()
@@ -176,15 +188,6 @@ bool Network::is_config()
   }
 }
 
-String Network::SSID_S()
-{
-  return user_ssid;
-}
-
-String Network::PASS_S()
-{
-  return user_password;
-}
 void Network::connectToWiFi()
 {
   if (user_ssid.length() == 0)
@@ -192,11 +195,12 @@ void Network::connectToWiFi()
     Serial.println("No SSID provided. Please configure WiFi first.");
     return;
   }
+  STATUS_UPDATE(start(LED_WIFI_CONNECTING), HS_WIFI_CONNECTING);
 
   if (user_password.length() == 0)
   {
     // Kết nối WiFi không có mật khẩu
-    WiFi.begin(user_ssid.c_str());
+    WiFi.begin(wifiData.ssid);
   }
   else
   {
@@ -205,7 +209,7 @@ void Network::connectToWiFi()
   }
 
   Serial.print("Connecting to ");
-  Serial.println(user_ssid);
+  Serial.println(wifiData.ssid);
 
   // Đợi và kiểm tra kết nối
   int timeout = 20; // 20 * 500ms = 10s timeout
@@ -371,35 +375,37 @@ void Network::apConfigure()
   while (1)
   { // loop until we get timed out (which will be accelerated if save/cancel selected)
 
-    if (homeSpan.controlButton && homeSpan.controlButton->triggered(9999, 3000))
-    {
-      LOG0("\n*** Access Point Terminated.  Restarting...\n\n");
-      STATUS_UPDATE(start(LED_ALERT), HS_AP_TERMINATED)
-      homeSpan.controlButton->wait();
-      homeSpan.reboot();
-    }
+    // if (homeSpan.controlButton && homeSpan.controlButton->triggered(9999, 3000))
+    // {
+    //   LOG0("\n*** Access Point Terminated.  Restarting...\n\n");
+    //   STATUS_UPDATE(start(LED_ALERT), HS_AP_TERMINATED)
+    //   homeSpan.controlButton->wait();
+    //   homeSpan.reboot();
+    // }
 
-    if (millis() > alarmTimeOut)
-    {
-      WiFi.softAPdisconnect(true); // terminate connections and shut down captive access point
-      delay(100);
-      if (apStatus == 1)
-      {
-        LOG0("\n*** Access Point: Exiting and Saving Settings\n\n");
-        return;
-      }
-      else
-      {
-        if (apStatus == 0)
-          LOG0("\n*** Access Point: Timed Out (%ld seconds).", lifetime / 1000);
-        else
-          LOG0("\n*** Access Point: Configuration Cancelled.");
-        LOG0("  Restarting...\n\n");
-        STATUS_UPDATE(start(LED_ALERT), HS_AP_TERMINATED)
-        homeSpan.reboot();
-      }
-    }
+    // if (millis() > alarmTimeOut)
+    // {
+    //   WiFi.softAPdisconnect(true); // terminate connections and shut down captive access point
+    //   delay(100);
+    //   if (apStatus == 1)
+    //   {
+    //     LOG0("\n*** Access Point: Exiting and Saving Settings\n\n");
+    //     return;
+    //   }
+    //   else
+    //   {
+    //     if (apStatus == 0)
+    //       LOG0("\n*** Access Point: Timed Out (%ld seconds).", lifetime / 1000);
+    //     else
+    //       LOG0("\n*** Access Point: Configuration Cancelled.");
+    //     LOG0("  Restarting...\n\n");
+    //     STATUS_UPDATE(start(LED_ALERT), HS_AP_TERMINATED)
+    //     homeSpan.reboot();
+    //   }
+    // }
+
     handleClient();
+
     if (is_config() == true)
     {
       while (true)
@@ -408,20 +414,20 @@ void Network::apConfigure()
         {
           // WiFi.begin(wifiData.ssid, wifiData.pwd);
 
-          char Sean_ssid[MAX_SSID + 1];
-          char Sean_pass[MAX_PWD + 1];
-          SSID_S().toCharArray(Sean_ssid, MAX_SSID + 1);
-          PASS_S().toCharArray(Sean_pass, MAX_PWD + 1);
+          // char Sean_ssid[MAX_SSID + 1];
+          // char Sean_pass[MAX_PWD + 1];
 
-          strcpy(wifiData.ssid, Sean_ssid);
+          // strcpy(wifiData.ssid, Sean_ssid);
           // wifiData.ssid   = str.toCharArray(SSID_S(), MAX_SSID+1);
-          strcpy(wifiData.pwd, Sean_pass);
+          // strcpy(wifiData.pwd, Sean_pass);
           // wifiData.pwd   = str.toCharArray(PASS_S(), MAX_PWD+1);
+          LOG2("\n Connect Wifi: ");
+          LOG2(wifiData.ssid);
           connectToWiFi();
         }
         else
         {
-          homeSpan.reboot();
+          return;
         }
       }
     }
