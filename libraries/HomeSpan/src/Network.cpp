@@ -260,6 +260,10 @@ String Network::generateHTML()
             font-size: 150%;
             margin: 10px;
         }
+        label_1 {
+            font-size: 300%;
+            margin: 10px;
+        }
         input {
             font-size: 120%;
             margin: 10px;
@@ -306,10 +310,10 @@ String Network::generateHTML()
 </head>
 <body>
     <center>
-        <p><b>WiFi Configuration</b></p>
+        <label_1 for="ssid">MakerLab.vn</label>
     </center>
     <center>
-        <img src="https://www.makerlab.vn/wp-content/uploads/2022/09/Logo-MakerLab-544x180-1.png" alt="MakerLab Logo">
+
     </center>
     <form action="/configure_wifi" method="post">
         <label for="ssid">WiFi SSID:</label>

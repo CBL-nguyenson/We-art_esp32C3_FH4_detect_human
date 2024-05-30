@@ -13,8 +13,6 @@ void setup() {
 
   // setCpuFrequencyMhz(80);
 
-  WiFiManager wm;
-
 
   homeSpan.begin(Category::Bridges, "TEST_HomeSpan MakerLab_V2");
 
@@ -27,7 +25,6 @@ void setup() {
   new Characteristic::Name("Ramdom_value_test");
   new Characteristic::Model("MakerLab_test_device");
   new Characteristic::SerialNumber("MKE_IOT_1.2.0");
-
 
   new SpanAccessory();
   new Service::AccessoryInformation();

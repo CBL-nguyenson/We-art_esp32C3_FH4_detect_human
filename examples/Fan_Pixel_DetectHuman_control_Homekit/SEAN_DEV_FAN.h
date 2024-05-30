@@ -157,13 +157,13 @@ struct SEAN_DEV_FAN : Service ::Fan
                     digitalWrite(Fan_State_2, LOW);
                     digitalWrite(Fan_State_3, LOW);
                 }
-                else if ((Value_Speed_fan > 35) && (Value_Speed_fan < 66))
+                else if ((Value_Speed_fan > 35) && (Value_Speed_fan < 67))
                 {
                     digitalWrite(Fan_State_1, LOW);
                     digitalWrite(Fan_State_2, HIGH);
                     digitalWrite(Fan_State_3, LOW);
                 }
-                else if (Value_Speed_fan >= 66)
+                else if (Value_Speed_fan >= 67)
                 {
                     digitalWrite(Fan_State_1, LOW);
                     digitalWrite(Fan_State_2, LOW);
