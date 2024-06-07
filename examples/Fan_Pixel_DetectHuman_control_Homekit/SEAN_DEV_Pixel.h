@@ -10,6 +10,7 @@ struct NeoPixel_RGB : Service::LightBulb {  // Addressable single-wire RGB LED S
   int nPixels;
   int p;
 
+
   float h;
   float s;
   float v;

@@ -48,6 +48,9 @@ void setup() {
   // new Characteristic::Name("Pixel led");
   // new NeoPixel_RGB(2,8); 
 
+    SPAN_ACCESSORY("Neo RGB");
+    new NeoPixel_RGB(NEOPIXEL_RGB_PIN,8);   
+
 
   // ------------------------------------------------------
   // homeSpan.autoPoll();
