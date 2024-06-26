@@ -1,4 +1,4 @@
-24212387109889628
+24222731575808599
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -91063,6 +91063,13 @@ SEAN_Button_4.2x3.3_SMD_V1
 4
 4
 SEAN_Device_sym
+SEAN_Diode_1N4007
+
+
+0
+2
+2
+SEAN_Device_sym
 SEAN_Joystick
 
 
@@ -91167,13 +91174,20 @@ DPAK TO-252 DPAK-3 TO-252-3 SOT-428
 0
 3
 3
+SEAN_MOSFET
+SEAN_MOSFET_bss138
+SOT, 3 Pin (https://www.jedec.org/system/files/docs/to-236h.pdf variant AB), generated with kicad-footprint-generator ipc_gullwing_generator.py
+SOT TO_SOT_SMD
+0
+3
+3
 SEAN_MountingHole
 SEAN_MountingHole_3mm_isolated
 
 
 0
-1
-1
+0
+0
 SEAN_Mtiny
 SEAN_Mtiny_I2C
 Through hole straight pin header, 1x04, 2.54mm pitch, single row
@@ -91181,6 +91195,13 @@ Through hole pin header THT 1x04 2.54mm single row
 0
 4
 4
+SEAN_Mtiny
+SEAN_Mtiny_Terminal_3.81
+terminal block Metz Connect Type086_RT03402HBLC, 2 pins, pitch 3.81mm, size 7.51x7.3mm^2, drill diamater 0.7mm, pad diameter 1.4mm, see http://www.metz-connect.com/de/system/files/productfiles/Datenblatt_310861_RT034xxHBLC_OFF-026114K.pdf, script-generated using https://github.com/pointhi/kicad-footprint-generator/scripts/TerminalBlock_MetzConnect
+THT terminal block Metz Connect Type086_RT03402HBLC pitch 3.81mm size 7.51x7.3mm^2 drill 0.7mm pad 1.4mm
+0
+2
+2
 SEAN_POWER
 DC-DC-buck-3Av2
 
@@ -91391,6 +91412,13 @@ SEAN_TP4056
 0
 9
 9
+SEAN_Relay
+SEAN_RELAY_HF46F
+
+
+0
+4
+4
 SEAN_STM
 STM8S003F3P6
 <b>TSSOP20</b><br>
@@ -91413,6 +91441,13 @@ SEAN_Hand_Solderring
 1
 1
 SEAN_connect
+SEAN_Neopixel
+Through hole straight pin header, 1x04, 2.54mm pitch, single row
+Through hole pin header THT 1x04 2.54mm single row
+0
+3
+3
+SEAN_connect
 SEAN_USB_A_90
 USB A connector https://www.we-online.com/catalog/datasheet/614004134726.pdf
 USB_A Female Connector receptacle
@@ -91433,6 +91468,13 @@ SEAN_conn_Maker_header_2x4
 0
 8
 8
+SEAN_mmWare
+SEAN_mmWare_Rd-03
+Through hole straight socket strip, 1x05, 2.54mm pitch, single row (from Kicad 4.0.7), script generated
+Through hole socket strip THT 1x05 2.54mm single row
+0
+5
+5
 SEAN_sensor
 SEAN_RPR_220
 

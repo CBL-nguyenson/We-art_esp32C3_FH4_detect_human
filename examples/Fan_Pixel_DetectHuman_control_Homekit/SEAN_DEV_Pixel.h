@@ -6,6 +6,7 @@ struct NeoPixel_RGB : Service::LightBulb {  // Addressable single-wire RGB LED S
   Characteristic::Hue H{ 0, true };
   Characteristic::Saturation S{ 0, true };
   Characteristic::Brightness V{ 0, true };
+  
   Pixel *pixel;
   int nPixels;
   int p;
