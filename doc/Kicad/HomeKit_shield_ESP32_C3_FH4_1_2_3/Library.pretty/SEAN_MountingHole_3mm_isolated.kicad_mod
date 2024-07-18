@@ -1,0 +1,149 @@
+(footprint "SEAN_MountingHole_3mm_isolated"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0.3 -3.8 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "812fa189-4db0-4750-9a84-8581b823c8b8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "MountingHole"
+		(at 0 2.2 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "214acbf9-0521-4455-9edf-b0ac813b4337")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" "SEAN_MountingHole:SEAN_MountingHole_3mm_isolated"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "322ed7f4-1a72-4eb8-b0b1-744caec523d1")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e80fedc4-ae57-4c95-8708-654761eadc6c")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" "Mounting Hole without connection"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b5158f67-2a6d-45fd-8d78-ce30bdb0b6cf")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_circle
+		(center 0 0)
+		(end 2.2 0)
+		(stroke
+			(width 1.5)
+			(type default)
+		)
+		(fill none)
+		(layer "B.SilkS")
+		(uuid "912d7aa5-8e7e-45b3-a6ec-4c3f78a029df")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 2.2 -2.2)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "89d3af81-f3c8-4885-8547-3a4ab2a76cf2")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 2.2 0)
+		(stroke
+			(width 1.5)
+			(type default)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "d628ca25-3875-4aa8-b6ce-4ce8a07fc947")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 2.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "235e0dcf-3daf-4c41-a0bd-942407ed12ec")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "" np_thru_hole circle
+		(at 0 0)
+		(size 6 6)
+		(drill 3)
+		(layers "*.Mask")
+		(uuid "49c523fd-c59e-4ca7-8c9d-669d7c8fd69d")
+	)
+	(zone
+		(net 0)
+		(net_name "")
+		(layers "F&B.Cu" "*.SilkS")
+		(uuid "d35ecb49-d40f-4651-9cf9-57841c8f1b58")
+		(hatch edge 0.5)
+		(connect_pads
+			(clearance 0)
+		)
+		(min_thickness 0.25)
+		(filled_areas_thickness no)
+		(keepout
+			(tracks not_allowed)
+			(vias not_allowed)
+			(pads allowed)
+			(copperpour not_allowed)
+			(footprints allowed)
+		)
+		(fill
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+		)
+		(polygon
+			(pts
+				(xy 155.8 96.125) (xy 154.4 97.525) (xy 151.1 97.525) (xy 149.5 95.925) (xy 149.5 92.825) (xy 151.2 91.125)
+				(xy 154.2 91.125) (xy 155.8 92.725)
+			)
+		)
+	)
+)

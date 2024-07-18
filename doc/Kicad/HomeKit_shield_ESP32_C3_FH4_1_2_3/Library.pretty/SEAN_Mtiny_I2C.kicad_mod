@@ -1,0 +1,234 @@
+(footprint "SEAN_Mtiny_I2C"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "Through hole straight pin header, 1x04, 2.54mm pitch, single row")
+	(tags "Through hole pin header THT 1x04 2.54mm single row")
+	(property "Reference" "REF**"
+		(at 2.8 3.4 -90)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "4a975f32-4666-44a5-8b76-45329ec566bb")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SEAN_MTINY_I2C"
+		(at 2.7235 11.345 180)
+		(layer "F.Fab")
+		(uuid "75e21e8f-5daf-4d64-837f-660d11ec61c8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" "SEAN_Mtiny:SEAN_Mtiny_I2C"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2181a692-9782-466d-8912-700d2df97f3d")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4d4caaa5-bf0e-4c2e-a9f7-78bfc7893565")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8dbbcada-3a69-497d-a1e8-d5af6beb587c")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -2.6 10.2)
+		(end -2.6 8.4)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "152e6f22-3976-4908-a045-6d7907b928bc")
+	)
+	(fp_line
+		(start -2.6 10.2)
+		(end 3.6 10.2)
+		(stroke
+			(width 0.12)
+			(type dash_dot_dot)
+		)
+		(layer "F.SilkS")
+		(uuid "59433fdd-d800-4df7-8a18-c9dc0a9b3a14")
+	)
+	(fp_line
+		(start -2.53 -2.4)
+		(end 3.6 -2.4)
+		(stroke
+			(width 0.12)
+			(type dash_dot_dot)
+		)
+		(layer "F.SilkS")
+		(uuid "09ea575e-d733-440d-aeac-65c20a53f4c6")
+	)
+	(fp_line
+		(start 1.2 5)
+		(end 2.4 5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "68bfb08c-b70a-410a-9114-3f92d0f00ef9")
+	)
+	(fp_line
+		(start 1.2 7.6)
+		(end 2.4 7.6)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "b775ca5d-2927-4df3-87b5-cf92b46ec963")
+	)
+	(fp_line
+		(start 1.8 4.4)
+		(end 1.8 5.6)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "ceeadcb1-7e23-4863-9511-33f1328a913d")
+	)
+	(fp_line
+		(start 3.6 -2.4)
+		(end 3.6 10.2)
+		(stroke
+			(width 0.12)
+			(type dash_dot_dot)
+		)
+		(layer "F.SilkS")
+		(uuid "f3fc4f30-77cd-4d29-8eed-c1d7a578bfc9")
+	)
+	(fp_poly
+		(pts
+			(xy -2.6 8.4) (xy -1.4 8.4) (xy -1.4 6.8) (xy -2.6 6.8) (xy -2.6 0.8) (xy -1.4 0.8) (xy -1.4 -0.8)
+			(xy -2.6 -0.8) (xy -2.6 -2.4)
+		)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill solid)
+		(layer "F.SilkS")
+		(uuid "a27e93d7-cff6-4f29-9d4e-16a117c388a0")
+	)
+	(fp_line
+		(start -3 -2.8)
+		(end -3 10.6)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "6f2c552e-439f-442f-a4b7-13d56b682c42")
+	)
+	(fp_line
+		(start -3 10.6)
+		(end 4 10.6)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "e7ff135a-1486-4525-84e6-9b0b54674246")
+	)
+	(fp_line
+		(start 4 -2.8)
+		(end -3 -2.8)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "8c037471-55b0-4102-af04-d526871c3855")
+	)
+	(fp_line
+		(start 4 10.6)
+		(end 4 -2.8)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "c2162738-57f6-42b7-b000-23dcc81c0bc3")
+	)
+	(pad "1" thru_hole oval
+		(at 0 7.62)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "6f920de9-3c70-4507-b8ce-00b6b89a5b0b")
+	)
+	(pad "2" thru_hole oval
+		(at 0 5.08)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "e7664713-c472-4b5f-ae62-ae18b977c2d5")
+	)
+	(pad "3" thru_hole oval
+		(at 0 2.54)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "5bc261b1-0ef7-4660-91e1-25c439f6c6fd")
+	)
+	(pad "4" thru_hole rect
+		(at 0 0)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "8d05e952-5e98-4286-a151-5a3d3dea8c37")
+	)
+	(model "C:/Users/cblng/OneDrive/My_Project/SEAN_kicad/3dmodels/SEAN_CONNECT/XH_2.54_/Thru Vertical/JST - XH - Thru (V) - 4Pin - 2.54mm.stp"
+		(offset
+			(xyz 0 -3.8 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 90)
+		)
+	)
+)

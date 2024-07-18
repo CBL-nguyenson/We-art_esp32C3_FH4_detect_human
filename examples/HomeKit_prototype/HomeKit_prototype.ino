@@ -54,7 +54,7 @@ void setup()
   new Service::AccessoryInformation();
   new Characteristic::Identify();
   new Characteristic::Name("USB-1");
-  new SEAN_DEV_DimmableLED(10);
+  new SEAN_DEV_DimmableLED(3);
 
   new SpanAccessory();
   new Service::AccessoryInformation();
@@ -72,10 +72,12 @@ void setup()
   new Service::AccessoryInformation();
   new Characteristic::Identify();
   new Characteristic::Name("Neopixel");
-  new SEAN_DEV_Pixel(4, 144);
+  new SEAN_DEV_Pixel(10, 1000);
 
   // ------------------------------------------------------
   // homeSpan.autoPoll();
+
+    homeSpan.enableAutoStartAP();
   homeSpan.setApSSID("MakerLab_homekit");
   homeSpan.setApPassword("27272727");
 

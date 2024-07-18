@@ -67,7 +67,7 @@
 #define DEFAULT_HOST_NAME "MakerLab-HomeKit"           // change with optional third argument in homeSpan.begin()
 #define DEFAULT_MODEL_NAME "MakerLab-HomeKit-ESP32"    // change with optional fourth argument in homeSpan.begin()
 
-#define DEFAULT_SETUP_CODE "27042005" // changed during network setup or with 'S' command
+#define DEFAULT_SETUP_CODE "46637726" // changed during network setup or with 'S' command
 
 #define DEFAULT_QR_ID "HSPN" // change with homeSpan.setQRID(qrID);
 

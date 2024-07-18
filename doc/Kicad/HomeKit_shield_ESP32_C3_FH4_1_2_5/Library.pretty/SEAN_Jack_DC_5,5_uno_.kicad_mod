@@ -1,0 +1,308 @@
+(footprint "SEAN_Jack_DC_5,5_uno_"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "DC Barrel Jack 2mm or 2.5mm center pin, https://www.kycon.com/Pub_Eng_Draw/KLDX-0202-AC%20&%20BC.pdf")
+	(tags "power jack 2mm 2.5mm KLDX-0202-BC KLDX-0202-AC")
+	(property "Reference" "REF**"
+		(at 0 -6 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "fa48526b-b6cb-476a-8038-66ed95fffa59")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SEAN_Jack_DC_5,5_uno"
+		(at -6 7 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "bd35dda4-e08a-40e7-8e41-f451aec03aa5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" "SEAN_POWER:SEAN_Jack_DC_5,5_uno_"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "54ed8782-2af6-4ddc-895d-0193151155fe")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ddaed5cd-59e7-454d-8caf-16a540d7ce49")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" "DC Barrel Jack with an internal switch"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8a4ec2fa-1252-41f2-9707-14d8af34c886")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -14.02 -4.62)
+		(end -14.02 4.62)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "958309a0-7072-4f35-8e99-50ae32ff7cab")
+	)
+	(fp_line
+		(start -14.02 4.62)
+		(end -5.9 4.62)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "92581871-11c3-4d56-9161-f1e54cceabaf")
+	)
+	(fp_line
+		(start -0.5 4.62)
+		(end 0.72 4.62)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c2161653-f8ea-4725-9ea4-0c1e68417ae0")
+	)
+	(fp_line
+		(start 0.72 -4.62)
+		(end -14.02 -4.62)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5bee4cbc-a031-4086-aaa6-f6df4e29c6b6")
+	)
+	(fp_line
+		(start 0.72 -2.95)
+		(end 0.72 -4.62)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "dd656979-b859-4f57-bb4f-05caeb561e14")
+	)
+	(fp_line
+		(start 0.72 4.62)
+		(end 0.72 2.95)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b23cb133-5070-4d97-9141-32945cebc29a")
+	)
+	(fp_line
+		(start -14.4 -5)
+		(end 1.1 -5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "659f6a7a-77d3-475f-a949-dec1c5dcbc9d")
+	)
+	(fp_line
+		(start -14.4 5)
+		(end -14.4 -5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "2cc04d72-8626-4f60-b344-ab876c3258e5")
+	)
+	(fp_line
+		(start -6.2 5)
+		(end -14.4 5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "11f2154e-c4c7-49a8-808f-16d2c1a41038")
+	)
+	(fp_line
+		(start -6.2 6.2)
+		(end -6.2 5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "fb2bb382-e807-4a24-b495-8d289ee469d2")
+	)
+	(fp_line
+		(start 0.1 5)
+		(end 0.1 6.2)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "68db4bcf-718c-4185-868d-9c5028525666")
+	)
+	(fp_line
+		(start 0.1 6.2)
+		(end -6.2 6.2)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "c49c3910-820c-4742-a670-f93eda50a511")
+	)
+	(fp_line
+		(start 1.1 -5)
+		(end 1.1 -3.25)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "1c80d613-7e50-457a-9e1a-42a408acb848")
+	)
+	(fp_line
+		(start 1.1 -3.25)
+		(end 1.5 -3.25)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "cec27698-406e-40ca-8e84-3f1a74913005")
+	)
+	(fp_line
+		(start 1.1 3.25)
+		(end 1.1 5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "8ac5b34b-29e0-4c30-aff2-5f9f72110f8c")
+	)
+	(fp_line
+		(start 1.1 5)
+		(end 0.1 5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "118bca37-1814-405b-875a-5053e9845de5")
+	)
+	(fp_line
+		(start 1.5 -3.25)
+		(end 1.5 3.25)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "5ee9f6c9-e6da-413b-9c69-95fcc65e5528")
+	)
+	(fp_line
+		(start 1.5 3.25)
+		(end 1.1 3.25)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "041e1e03-d370-415e-8455-cf80d320d7a9")
+	)
+	(fp_rect
+		(start -13.9 -4.5)
+		(end 0.6 4.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.Fab")
+		(uuid "64563a1f-a0ca-4ad6-982b-9cb96e6179b2")
+	)
+	(fp_text user "${REFERENCE}"
+		(at -2.9 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "3b6723b3-49f2-4505-8dec-05de0ee2d1fd")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at 0 0)
+		(size 2 4.5)
+		(drill oval 0.8 3.5)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "56acda2c-4038-4c97-9cb7-1ddd176cefcc")
+	)
+	(pad "2" thru_hole oval
+		(at -6.2 0)
+		(size 2 4)
+		(drill oval 0.8 3)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "94acd3d0-307e-4670-9898-da912b08678d")
+	)
+	(pad "3" thru_hole oval
+		(at -3.2 4.7 90)
+		(size 2 4)
+		(drill oval 0.8 3)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "021b67ae-6642-41ad-95bf-d7312a002067")
+	)
+	(model "C:/Users/cblng/OneDrive/My_Project/SEAN_kicad/3dmodels/SEAN_POWER/SEAN_Jack_DC_5,5_uno_.STEP"
+		(offset
+			(xyz -7 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 90)
+		)
+	)
+)

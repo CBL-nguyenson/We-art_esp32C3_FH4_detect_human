@@ -1,0 +1,325 @@
+(footprint "SEAN_USB_A_90"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "USB A connector https://www.we-online.com/catalog/datasheet/614004134726.pdf")
+	(tags "USB_A Female Connector receptacle")
+	(property "Reference" "REF**"
+		(at 0 -5.08 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "86e60dc7-a88d-4a7e-bc3c-78adb0c6ebd8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SEAN_USB_A_90"
+		(at 0 5.08 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d362d61d-342e-4be9-a03f-1c721504c314")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" "SEAN_connect:SEAN_USB_A_90"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7c3e5ee7-b449-4a9f-a9e4-012854a112fd")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" " ~"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ae847492-327d-4ea9-bfac-fbac971cf84a")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" "USB Type A connector"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1de61a12-1e11-4932-b92c-50b43d2037ba")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -12.43 -3.65)
+		(end -12.43 3.65)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2f0dddfc-2de2-4266-8976-c530b963d1e9")
+	)
+	(fp_line
+		(start -12.43 -3.65)
+		(end -1.98 -3.65)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5fdfa860-b855-426b-9cc1-29df0d7e0a64")
+	)
+	(fp_line
+		(start -12.43 3.65)
+		(end -1.98 3.65)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ab1da177-fd15-40b9-bc35-9d8e42f045ed")
+	)
+	(fp_line
+		(start -0.5 4.03)
+		(end 0.5 4.03)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "45f646ee-bb83-4db6-9f8a-08fbb6ed0751")
+	)
+	(fp_line
+		(start 0.52 -3.65)
+		(end 5.02 -3.65)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "817403be-37b8-4cec-a5b6-ccda5fbd095d")
+	)
+	(fp_line
+		(start 0.52 3.65)
+		(end 5.02 3.65)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2ea20f2e-56ab-47a7-838d-3d3245936f37")
+	)
+	(fp_line
+		(start 7.07 -1.5)
+		(end 7.07 1.5)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "87ef8b40-dfdd-465e-b7d9-44a2772a524c")
+	)
+	(fp_line
+		(start -12.83 -4.3)
+		(end 7.85 -4.3)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "bab89452-59c7-492b-bbbc-8af50ae028df")
+	)
+	(fp_line
+		(start -12.83 4.3)
+		(end -12.83 -4.3)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "10a50160-b306-4ef7-a7df-d7e5c55ad643")
+	)
+	(fp_line
+		(start 7.85 -4.3)
+		(end 7.85 4.3)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "bf486716-dbc0-46b8-958b-a0ea443f704e")
+	)
+	(fp_line
+		(start 7.85 4.3)
+		(end -12.83 4.3)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "8d5765dd-c939-464a-afad-3bf72fea2341")
+	)
+	(fp_line
+		(start -12.33 -3.55)
+		(end 6.97 -3.55)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a0429704-8a5a-43ce-b873-a39851c780bc")
+	)
+	(fp_line
+		(start -12.33 3.55)
+		(end -12.33 -3.55)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "3851ef60-5e52-40fb-8502-63e973779a8c")
+	)
+	(fp_line
+		(start -0.5 3.55)
+		(end 0 1.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "676b87a7-11ad-47c3-bdbf-998f6d0c315c")
+	)
+	(fp_line
+		(start 0 1.25)
+		(end 0.5 3.55)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "c1537855-64ac-4042-ba3f-3baa92a59f8e")
+	)
+	(fp_line
+		(start 6.97 -3.55)
+		(end 6.97 3.55)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "dc551091-30d8-4d25-b061-38a1e17db295")
+	)
+	(fp_line
+		(start 6.97 3.55)
+		(end -12.33 3.55)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "b4e51cee-480b-41ac-9522-e14d98dd2daa")
+	)
+	(fp_text user "${REFERENCE}"
+		(at -2.855 0 0)
+		(layer "F.Fab")
+		(uuid "df69e288-7ee1-4b2a-8ab1-cb0cc48bb926")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at 0 0)
+		(size 1.6 1.6)
+		(drill 0.92)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "c2598915-c41f-45da-b650-5579920b7592")
+	)
+	(pad "2" thru_hole circle
+		(at 2 0)
+		(size 1.6 1.6)
+		(drill 0.92)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "d7e2bc21-05cc-4ef2-b5ca-eb8fd481d501")
+	)
+	(pad "3" thru_hole circle
+		(at 4 0)
+		(size 1.6 1.6)
+		(drill 0.92)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "4c82797f-824e-462d-91d1-52fb6b8ed036")
+	)
+	(pad "4" thru_hole circle
+		(at 6 0)
+		(size 1.6 1.6)
+		(drill 0.92)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "49147aa5-7ede-452c-8048-5250999c12a7")
+	)
+	(pad "5" thru_hole circle
+		(at -0.73 -2.72)
+		(size 2.15 2.15)
+		(drill 1.5)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "64ce89d2-d002-4abe-807b-8180ef7af6b5")
+	)
+	(pad "5" thru_hole circle
+		(at -0.73 2.72)
+		(size 2.15 2.15)
+		(drill 1.5)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "e1c3ed56-d96f-483a-9f57-a04938018026")
+	)
+	(pad "5" thru_hole circle
+		(at 6.27 -2.72)
+		(size 2.15 2.15)
+		(drill 1.5)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "edb0771e-8bb2-4a7a-87ba-24cb1c60a36b")
+	)
+	(pad "5" thru_hole circle
+		(at 6.27 2.72)
+		(size 2.15 2.15)
+		(drill 1.5)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "c1f03ecf-0fee-4af1-99c0-2fceaed3dc40")
+	)
+	(model "C:/Users/cblng/OneDrive/My_Project/SEAN_kicad/3dmodels/SEAN_CONNECT/USB_A/USB-A 111 (vertical on plate).STEP"
+		(offset
+			(xyz 1.3 -3.5 6.5)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 180 0 -180)
+		)
+	)
+)

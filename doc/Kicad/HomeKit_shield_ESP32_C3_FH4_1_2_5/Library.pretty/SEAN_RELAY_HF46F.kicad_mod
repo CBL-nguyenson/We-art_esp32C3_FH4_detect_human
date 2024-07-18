@@ -1,0 +1,455 @@
+(footprint "SEAN_RELAY_HF46F"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at -7.325 -5.385 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "85c7a736-0dbe-43b4-9728-4f80d5ae58bc")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SEAN_Relay_G5NB"
+		(at 77.965 12.31 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "28a20715-b870-445e-b192-154235a17961")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" "SEAN_Relay:SEAN_RELAY_HF46F"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a6fb6ca7-470f-453d-b667-e234a2e5cc2f")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "be541a5d-50d3-4962-83aa-135353138af5")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8b752c10-97b7-4f22-a18c-29f30f617e33")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "MF" "Hongfa"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0ff9f71f-75ce-4b50-8eb3-24557ffbbf4e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MAXIMUM_PACKAGE_HEIGHT" "15.6 mm"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "462027da-0a68-4f03-9d22-069b11cb437a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Package" "None"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "18fa8f90-9555-4083-8e9b-a69aa62253e3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Price" "None"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6f01824b-c5de-4f7b-9884-c8666f3d23af")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Check_prices" "https://www.snapeda.com/parts/HF46F/005-HS1/Hongfa/view-part/?ref=eda"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4d4ee23b-ce40-4b5d-8c0b-8fd5d0ec1d94")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "STANDARD" "Manufacturer Recommendations"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6431364c-4acb-4320-a28f-22c83df035b4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "PARTREV" "1.00"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "88241162-9335-4a75-b231-f300e08c9d82")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "SnapEDA_Link" "https://www.snapeda.com/parts/HF46F/005-HS1/Hongfa/view-part/?ref=snap"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7d1b167d-7ffd-4a8c-bd08-2e43216957da")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MP" "HF46F/005-HS1"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "53a012d6-2463-4d2b-af38-44264dd32cf5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description_1" "\nRelay: electromagnetic; SPST-NO; Ucoil: 5VDC; 5A/250VAC; 5A/30VDC\n"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b84c8070-173d-4f4b-9f44-b1ca6cf07b29")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MANUFACTURER" "Hongfa"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "576dd97c-8517-4276-b1ec-33541ce7050b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Availability" "In Stock"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "929a3c25-1237-4813-83eb-8b41c2d2c33b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "SNAPEDA_PN" "HF46F/005-HS1"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9f73f70f-fdda-498c-bc1f-c14fb7c3ab9b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -10.25 -3.5)
+		(end -10.25 -3.495)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6e06cf5a-0824-477d-b4f3-a9ce194cd255")
+	)
+	(fp_line
+		(start -10.25 -1.205)
+		(end -10.25 1.205)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ec5e3d43-973e-4475-9fa7-4ab4b6486226")
+	)
+	(fp_line
+		(start -10.25 3.5)
+		(end -10.25 3.495)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "84e5d475-b99a-435f-ac9b-1e92645a935e")
+	)
+	(fp_line
+		(start -10.25 3.5)
+		(end 10.25 3.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "14d6c8e4-590f-4fe4-a4ba-bbe09377f821")
+	)
+	(fp_line
+		(start 10.25 -3.5)
+		(end -10.25 -3.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b13ae259-5641-46dd-8349-30d1b8f43fc1")
+	)
+	(fp_line
+		(start 10.25 1.205)
+		(end 10.25 -3.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "48c81d33-9e93-4186-9548-d91c62ba6eb6")
+	)
+	(fp_line
+		(start 10.25 3.5)
+		(end 10.25 3.495)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "da1b4767-86c4-454c-97d6-fa3e70d616c5")
+	)
+	(fp_circle
+		(center -11.025 -2.35)
+		(end -10.925 -2.35)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "dca7d5af-98b3-412f-be4a-31913e86a0d4")
+	)
+	(fp_line
+		(start -10.5 -3.75)
+		(end -10.5 3.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "3f235856-911c-4d29-b917-5e6de9ec6118")
+	)
+	(fp_line
+		(start -10.5 3.75)
+		(end 10.5 3.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a4e1881f-5e9a-4cd2-855d-7fac49aab6b5")
+	)
+	(fp_line
+		(start 10.5 -3.75)
+		(end -10.5 -3.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "e555ab56-7894-4e06-9a35-f598f9fd8db9")
+	)
+	(fp_line
+		(start 10.5 3.75)
+		(end 10.5 -3.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "9a504d6b-489c-4d1f-9363-5848d42e5923")
+	)
+	(fp_line
+		(start -10.25 -3.5)
+		(end -10.25 3.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d7161172-f67c-49ab-9dd7-fde6ebe810ad")
+	)
+	(fp_line
+		(start -10.25 3.5)
+		(end 10.25 3.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "b2508370-9e69-40ff-89a0-4a81b0e741b4")
+	)
+	(fp_line
+		(start 10.25 -3.5)
+		(end -10.25 -3.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "ba49c1b0-93bc-4934-b938-ab70658feb86")
+	)
+	(fp_line
+		(start 10.25 3.5)
+		(end 10.25 -3.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f8ac83d2-3e95-4840-858a-04f7337d8c48")
+	)
+	(fp_circle
+		(center -11.025 -2.35)
+		(end -10.925 -2.35)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.Fab")
+		(uuid "fc2dd764-5851-43b2-b3df-24ff048fadea")
+	)
+	(pad "1" thru_hole rect
+		(at -9.2 -2.35)
+		(size 1.65 1.65)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.102)
+		(uuid "1717cfc7-d1f4-410d-94e0-86658b39486b")
+	)
+	(pad "2" thru_hole circle
+		(at -9.2 2.35)
+		(size 1.65 1.65)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.102)
+		(uuid "f6d61f5b-b058-4b2f-8fd3-ac8184a2eb93")
+	)
+	(pad "3" thru_hole circle
+		(at 2.3 2.35)
+		(size 1.65 1.65)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.102)
+		(uuid "8e181de6-1d67-428a-9d64-a366838298e4")
+	)
+	(pad "4" thru_hole circle
+		(at 9.3 2.35)
+		(size 1.65 1.65)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.102)
+		(uuid "90e6f88f-3516-42cf-8ee9-0ff5794f87d4")
+	)
+	(model "C:/Users/cblng/OneDrive/My_Project/SEAN_kicad/3dmodels/SEAN_Relay/G5NB/SEAN_G5NB-1A-E DC5.STEP"
+		(offset
+			(xyz -9 -2.3 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 0)
+		)
+	)
+)

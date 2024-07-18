@@ -1,0 +1,248 @@
+(footprint "SEAN_Neopixel"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "Through hole straight pin header, 1x04, 2.54mm pitch, single row")
+	(tags "Through hole pin header THT 1x04 2.54mm single row")
+	(property "Reference" "REF**"
+		(at 2.8 3.4 -90)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "5c25e04b-eee7-4e06-b0b6-580c8765caf6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SEAN_Neopixel"
+		(at 0.4318 5.4102 -90)
+		(layer "F.Fab")
+		(uuid "148a27f6-d48b-49e8-a26c-14732f9c403e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" "SEAN_connect:SEAN_Neopixel"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1e82b422-192d-4f7a-b70f-8d63edbd6bb2")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ff5d34a9-9ff9-4c31-be20-a1022332ca58")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5897233b-c005-4ec5-8f7d-abd11229ffcd")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -2.6 10.2)
+		(end 3.6 10.2)
+		(stroke
+			(width 0.12)
+			(type dash_dot_dot)
+		)
+		(layer "F.SilkS")
+		(uuid "1fc70043-0ac9-4d24-ae68-2ec5693ef5be")
+	)
+	(fp_line
+		(start -2.557 -0.1524)
+		(end -2.557 10.2254)
+		(stroke
+			(width 0.12)
+			(type dash_dot_dot)
+		)
+		(layer "F.SilkS")
+		(uuid "e4cf81a3-4b8e-415b-b213-e402491022c5")
+	)
+	(fp_line
+		(start -2.557 -0.1524)
+		(end 3.573 -0.1524)
+		(stroke
+			(width 0.12)
+			(type dash_dot_dot)
+		)
+		(layer "F.SilkS")
+		(uuid "ec697d9a-d1f1-46e3-a6cd-0ccd542d8727")
+	)
+	(fp_line
+		(start 1.2 7.6)
+		(end 2.4 7.6)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "9929c3c1-c640-4e38-ae5d-57db7cf3d564")
+	)
+	(fp_line
+		(start 1.2034 2.5146)
+		(end 2.4034 2.5146)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "1335e62f-fcbe-4264-b5a3-ad2e1f36295b")
+	)
+	(fp_line
+		(start 1.8034 1.9146)
+		(end 1.8034 3.1146)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "bbac4e81-1506-4e8c-977f-a7d83f9abdad")
+	)
+	(fp_line
+		(start 3.6 -0.1778)
+		(end 3.6 10.2)
+		(stroke
+			(width 0.12)
+			(type dash_dot_dot)
+		)
+		(layer "F.SilkS")
+		(uuid "84bc91fd-010c-4cb2-ad09-52426d79353d")
+	)
+	(fp_rect
+		(start -2.5908 6.4516)
+		(end -1.9812 8.636)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill solid)
+		(layer "F.SilkS")
+		(uuid "4fdafc5e-afb1-45a0-948b-3f29f2ec9959")
+	)
+	(fp_rect
+		(start -2.5654 1.3081)
+		(end -1.9558 3.4925)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill solid)
+		(layer "F.SilkS")
+		(uuid "aebd59d1-5688-4930-ad7e-e399f27c9d87")
+	)
+	(fp_line
+		(start -3 -0.4318)
+		(end -3 10.6)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "709a4cf0-2c50-4a1f-8c93-27c3b9ca1562")
+	)
+	(fp_line
+		(start -3 10.6)
+		(end 4 10.6)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "4da0df2a-6884-4b50-a4f6-f98385c67c6d")
+	)
+	(fp_line
+		(start 4 10.6)
+		(end 4 -0.4318)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "86422f10-da38-48c9-afbe-c7d0dbba2223")
+	)
+	(fp_line
+		(start 4.008 -0.5334)
+		(end -2.992 -0.5334)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "83a9e0d5-0c1f-4d99-b2c9-46066c4602aa")
+	)
+	(fp_text user "SIG"
+		(at 1.0414 5.715 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "4f2cbeca-91f9-45d2-be5d-864835a558d0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(pad "1" thru_hole oval
+		(at 0 7.62)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "f7ebb213-df2f-4581-a190-c3a1cf388ce7")
+	)
+	(pad "2" thru_hole oval
+		(at 0 5.08)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "04538734-340d-4b9a-8d38-4746bb3e6bec")
+	)
+	(pad "3" thru_hole oval
+		(at 0 2.54)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "205ce272-03c8-4241-8c02-bb856617d85a")
+	)
+	(model "C:/Users/cblng/OneDrive/My_Project/SEAN_kicad/3dmodels/SEAN_CONNECT/XH_2.54_/Thru Vertical/JST - XH - Thru (V) - 3Pin - 2.54mm.stp"
+		(offset
+			(xyz 0 -5 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 90)
+		)
+	)
+)

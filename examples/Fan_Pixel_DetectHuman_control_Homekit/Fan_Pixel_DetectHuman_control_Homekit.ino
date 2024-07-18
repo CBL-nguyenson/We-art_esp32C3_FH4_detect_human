@@ -11,7 +11,7 @@ void setup() {
   Serial.begin(115200);
   // Serial1.begin(115200, SERIAL_8N1, 20 , 21);
 
-  // setCpuFrequencyMhz(80);
+  setCpuFrequencyMhz(80);
 
 
   homeSpan.begin(Category::Bridges, "TEST_HomeSpan MakerLab_V2");
@@ -22,7 +22,7 @@ void setup() {
   new SpanAccessory();
   new Service::AccessoryInformation();
   new Characteristic::Identify();
-  new Characteristic::Name("Ramdom_value_test");
+  new Characteristic::Name("Fan_Bridges");
   new Characteristic::Model("MakerLab_test_device");
   new Characteristic::SerialNumber("MKE_IOT_1.2.0");
 
@@ -42,14 +42,14 @@ void setup() {
   // Fan_Button_3           pin: 6
   // Fan_Button_Start_Stop  pin: 0
 
-  // new SpanAccessory();
-  // new Service::AccessoryInformation();
-  // new Characteristic::Identify();
-  // new Characteristic::Name("Pixel led");
-  // new NeoPixel_RGB(2,8); 
+  new SpanAccessory();
+  new Service::AccessoryInformation();
+  new Characteristic::Identify();
+  new Characteristic::Name("Pixel led");
+  new NeoPixel_RGB(2,8); 
 
-    SPAN_ACCESSORY("Neo RGB");
-    new NeoPixel_RGB(NEOPIXEL_RGB_PIN,8);   
+    // SPAN_ACCESSORY("Neo RGB");
+    // new NeoPixel_RGB(NEOPIXEL_RGB_PIN,8);   
 
 
   // ------------------------------------------------------
@@ -59,7 +59,7 @@ void setup() {
 
   homeSpan.setControlPin(9);  // nút điều khiển
   homeSpan.setStatusPin(8);   // led trạng thái
-  homeSpan.setPairingCode("27041601");
+  // homeSpan.setPairingCode("27041601");
 }
 
 void loop() {
